@@ -8,7 +8,15 @@ The key returns a value of the latitude and longitude of that resort.
 
 Those coord. are passed into the weather api url
 
-an function gets the snow forecast for that resort for the next 24 hours
+a function gets the snow forecast for that resort for the next 24 hours
+    - Open weather API can return the snow accumulation for the past 3 hours.
+    - We can check if the accumulation for any three hour period over the next
+        24 or 48 hours is greater than a certain amount.
+    - Check times by returning the first 8 objects with a unix timestamp 
+        greater than or equal to this moment.
+
+    - OPEN WEATHER IS SO INACCURATE IT IS USELESS.
+
 
 An api is called to the LIFX lightbulb.  
     Depending on how much snow there is forecasted a specific color,

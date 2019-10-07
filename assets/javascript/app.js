@@ -1,14 +1,17 @@
 /* Basic format we can use for resorts, all lowercase and one word so that 
     we can convert any input into lowercase with no spaces.*/
 let resorts = {
-    'crystal': {
+    crystal: {
         lat: '46.928291',
         long: '-121.504595',
         timezone: 'America/Los_Angeles'
     }
 }
 
-let apiKey = 'd7401e28697849dfba0d624d16de25ec';
+// OpenWeather key
+let apiKey = 'fcc4fbbfbe4762dbfc16ec66805a4ded';
+// Accuweather key
+// let  apiKey = '0C2Q7sN4CJQLYdk3oTCUJmZZrojp1DR5';
 
 // This will return the UNIX timestamp from 8 hours ago.
 let queryTime = moment().subtract(8, 'hours').format('X');
