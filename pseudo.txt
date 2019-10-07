@@ -1,3 +1,5 @@
+*****BASIC, INSTANT VERSION*****
+
 A user enters a ski resort and clicks submit
 
 that ski resort is matched to a key in our resorts obj
@@ -6,7 +8,56 @@ The key returns a value of the latitude and longitude of that resort.
 
 Those coord. are passed into the weather api url
 
-use moment.js to get the UNIX timestamp from 8 hours ago.
-    - Pass this into the weather api url
+an function gets the snow forecast for that resort for the next 24 hours
 
-an ajax called is used on the url which returns a weather forecast
+An api is called to the LIFX lightbulb.  
+    Depending on how much snow there is forecasted a specific color,
+    brightness, and effect will be passed to the light.
+
+
+
+*****VERSION WITH A MAP ON THE UI***** 
+
+In this version there is a google map api used on the homepage.
+
+The user can click anywhere on the map
+
+An api call will return the latitude and longitude for wherever they
+clicked.
+
+These coordinates will be passed into the weather api
+
+The weather api returns a snow forecast
+
+The snow amount is passed into the light api
+
+The light changes color, brightness, and effect.
+
+
+
+*****VERSION WITH NOTIFICATIONS*****
+
+The user can select a resort and a snow level to receive notifications about.
+
+If the snow level forecasted for that resort reaches the threshold specified,
+a notification will be sent to the user informing them that the resort is 
+forecasted to get that snow level.  
+
+The user's light will also be set to a color, brightness, and effect 
+corresponding to the notification.
+
+
+
+*****VERSION WITH ALARM*****
+
+The user can select a time to 'wake up'
+
+When this time comes, the app calls the weather api and checks how much 
+snow was received OVERNIGHT
+    - This version requires an API that can give us historical data or 
+        a server that can check the weather throughout the night and store
+        how much snow was received each time the api was called
+
+The light is then passed the snow level data to change to a certain color
+
+A notification is sent to the user informing them how much snow was received.
