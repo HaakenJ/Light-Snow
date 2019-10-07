@@ -1,0 +1,12 @@
+A user enters a ski resort and clicks submit
+
+that ski resort is matched to a key in our resorts obj
+
+The key returns a value of the latitude and longitude of that resort.
+
+Those coord. are passed into the weather api url
+
+use moment.js to get the UNIX timestamp from 8 hours ago.
+    - Pass this into the weather api url
+
+an ajax called is used on the url which returns a weather forecast
