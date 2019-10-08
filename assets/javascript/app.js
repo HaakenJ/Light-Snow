@@ -37,12 +37,12 @@ $.ajax({
         hourIndex = 1;
     console.log('Api has been called.');
     console.log(JSON.stringify(response.hourly));
-    // response.hourly.data.forEach((hour) => {
-    //     if (hour.time >= queryTime) {
-    //         lastEight[hourIndex] = hour;
-    //         hourIndex++
-    //     }
-    // })
+    response.hourly.data.forEach((hour) => {
+        if (hour.time >= queryTime) {
+            lastEight[hourIndex] = hour;
+            hourIndex++
+        }
+    })
     console.log('Number of hours: ' + hourIndex);
     console.log(lastEight)
 })
