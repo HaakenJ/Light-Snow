@@ -1,12 +1,6 @@
 /* Basic format we can use for resorts, all lowercase and one word so that 
     we can convert any input into lowercase with no spaces.*/
-let resorts = {
-    'crystal': {
-        lat: '46.928291',
-        long: '-121.504595',
-        timezone: 'America/Los_Angeles'
-    }
-}
+let resorts = ['aspen'];
 
 let apiKey = '050a4a8faf065301b32e5117faf9169a'; // Open Weather cprybell Project-1 API key
 
@@ -22,8 +16,8 @@ console.log(queryTime);
     hours prior to the current time. */
 
 // A test url for the summit of crystal mountain.
-let weatherUrl = `https://api.darksky.net/forecast/d7401e28697849dfba0d624d16de25ec/46.928291,-121.504595,${queryTime}?units=us`;
-
+let weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=zermatt&APPID=${apiKey}`;
+//api.openweathermap.org/data/2.5/weather?q={city name},{country code}
 
 
 $.ajax({
@@ -33,13 +27,15 @@ $.ajax({
     let lastEight = {},
         hourIndex = 1;
     console.log('Api has been called.');
-    console.log(JSON.stringify(response.hourly));
+    console.log(response);
+    console.log(JSON.stringify(response));
+    //console.log(response.weather.id);
     // response.hourly.data.forEach((hour) => {
     //     if (hour.time >= queryTime) {
     //         lastEight[hourIndex] = hour;
     //         hourIndex++
     //     }
     // })
-    console.log('Number of hours: ' + hourIndex);
-    console.log(lastEight)
+    //console.log('Number of hours: ' + hourIndex);
+    //console.log(lastEight)
 })
