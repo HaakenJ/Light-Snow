@@ -1,5 +1,4 @@
 import requests
-from browser import document
 
 
 weatherCodes = {
@@ -332,5 +331,8 @@ if response.status_code == 200:
 elif response.status_code == 404:
     print('Not Found.')
 
+print(response.json())
 
-document['test'].text = response.json()
+if __name__ == "__main__":
+    print(response.json())
+
