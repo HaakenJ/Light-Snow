@@ -20,3 +20,4 @@ User enters a ski resort or gps location into our website and sets what time the
 * Make API call to get the snowfall for the last 8hours
 * Make an API call to the light to light it up a certain color based on the amount of snowfall of the last 8 hours
 * Turn on users light based on snowfall
+test
