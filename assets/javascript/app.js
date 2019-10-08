@@ -8,7 +8,7 @@ let resorts = {
     }
 }
 
-let apiKey = 'd7401e28697849dfba0d624d16de25ec';
+let apiKey = '050a4a8faf065301b32e5117faf9169a'; // Open Weather cprybell Project-1 API key
 
 // This will return the UNIX timestamp from 8 hours ago.
 let queryTime = moment().subtract(8, 'hours').format('X');
