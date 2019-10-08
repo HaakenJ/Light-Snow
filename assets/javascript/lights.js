@@ -292,3 +292,19 @@ let weatherCodes = {
         }
     }
 }
+
+token = 'YOUR_APP_TOKEN';
+
+$.ajax({
+    headers: {
+        'Authorization': `Bearer ${token}`
+    },
+    url: 'https://api.lifx.com/v1/lights/all/state',
+    method: 'PUT',
+    data: JSON.stringify({
+        'power': 'on',
+        'color': 'blue',
+        'brightness': 1.0,
+        'duration': 5
+    })
+})
