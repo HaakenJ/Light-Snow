@@ -69,3 +69,18 @@ snow was received OVERNIGHT
 The light is then passed the snow level data to change to a certain color
 
 A notification is sent to the user informing them how much snow was received.
+
+
+
+
+
+******PSEUDO FOR LIGHT API******
+
+- Receive the weather code from the weather API
+
+- Pass the weather code into an object, 
+    - The object contains the weather codes as keys and light colors, brightness, and descriptions as values.
+    - The object will return the light color API parameters.
+
+- I make the PUT call to the light using the color parameters.
+
