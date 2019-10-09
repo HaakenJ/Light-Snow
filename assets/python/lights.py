@@ -301,23 +301,36 @@ weatherCodes = {
 # To customize headers pass a dictionary of HTTP headers to get() using the
 # headers parameter.
 
-response = requests.get(
-    'https://api.openweathermap.org/data/2.5/weather',
-    params={
-        'apiKey': 'fcc4fbbfbe4762dbfc16ec66805a4ded',
-        'q': 'seattle', 
-        }
-    )
+# response = requests.get(
+#     'https://api.openweathermap.org/data/2.5/weather',
+#     params={
+#         'apiKey': 'fcc4fbbfbe4762dbfc16ec66805a4ded',
+#         'q': 'seattle',
+#         }
+#     )
 
 
 # Turn on lights.
-# token = 'YOUR_APP_TOKEN'
+token = 'cea0036c68cff741a8d5dbc6e1cbfb998f099b1daa88d19807365863ee55128c'
+oWKey = 'fcc4fbbfbe4762dbfc16ec66805a4ded'
 
-# response = requests.put(
-#     'https://api.lifx.com/v1/lights/all/state',
-#     headers = {'Authorization': f'Bearer {token}',},
-#     data = {'power': 'on',}
-#     )
+weatherResp = requests.get(
+    f'https://api.openweathermap.org/data/2.5/weather',
+    params={
+        'apiKey': 'oWKey,
+        'q': 'seattle',
+    }
+)
+
+
+lightPut = requests.put(
+    'https://api.lifx.com/v1/lights/all/state',
+    headers={'Authorization': f'Bearer {token}', },
+    data={
+        'power': 'on',
+        'color': 'blue'
+    }
+)
 
 # Check if the request was successful or not.
 # the conditional lines are equivalent to:
@@ -335,4 +348,3 @@ print(response.json())
 
 if __name__ == "__main__":
     print(response.json())
-

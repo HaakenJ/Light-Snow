@@ -78,6 +78,11 @@ A notification is sent to the user informing them how much snow was received.
 
 - Receive the weather code from the weather API
 
+    - when I receive a code I check the first number in the code and store that
+        in a variable as the first child to look in in weatherCodes.
+        - I then find the the weather code in the object that matches and pass
+            the parameters into the ajax call.
+
 - Pass the weather code into an object, 
     - The object contains the weather codes as keys and light colors, brightness, and descriptions as values.
     - The object will return the light color API parameters.
