@@ -8,7 +8,15 @@ The key returns a value of the latitude and longitude of that resort.
 
 Those coord. are passed into the weather api url
 
-an function gets the snow forecast for that resort for the next 24 hours
+a function gets the snow forecast for that resort for the next 24 hours
+    - Open weather API can return the snow accumulation for the past 3 hours.
+    - We can check if the accumulation for any three hour period over the next
+        24 or 48 hours is greater than a certain amount.
+    - Check times by returning the first 8 objects with a unix timestamp 
+        greater than or equal to this moment.
+
+    - OPEN WEATHER IS SO INACCURATE IT IS USELESS.
+
 
 An api is called to the LIFX lightbulb.  
     Depending on how much snow there is forecasted a specific color,
@@ -61,3 +69,23 @@ snow was received OVERNIGHT
 The light is then passed the snow level data to change to a certain color
 
 A notification is sent to the user informing them how much snow was received.
+
+
+
+
+
+******PSEUDO FOR LIGHT API******
+
+- Receive the weather code from the weather API
+
+    - when I receive a code I check the first number in the code and store that
+        in a variable as the first child to look in in weatherCodes.
+        - I then find the the weather code in the object that matches and pass
+            the parameters into the ajax call.
+
+- Pass the weather code into an object, 
+    - The object contains the weather codes as keys and light colors, brightness, and descriptions as values.
+    - The object will return the light color API parameters.
+
+- I make the PUT call to the light using the color parameters.
+

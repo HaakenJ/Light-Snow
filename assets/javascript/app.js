@@ -1,5 +1,6 @@
 /* Basic format we can use for resorts, all lowercase and one word so that 
     we can convert any input into lowercase with no spaces.*/
+
 //let resorts = ['aspen'];
 
 //let apiKey = '050a4a8faf065301b32e5117faf9169a'; // Open Weather cprybell Project-1 API key
@@ -29,6 +30,7 @@ $.ajax({
     let lastEight = {},
         hourIndex = 1;
     console.log('Api has been called.');
+
     console.log(response);
     console.log(JSON.stringify(response));
     console.log(response.weather[0].id);
@@ -46,3 +48,4 @@ $.ajax({
 */
 
 let currentWeather = getWeather("resort");
+
