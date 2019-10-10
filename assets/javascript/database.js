@@ -12,9 +12,14 @@ firebase.initializeApp(firebaseConfig);
 
 let database = firebase.database();
 
+/* If a user is signed in
+    - show the favorites drop down
+    - If that user has favorites in the database
+        - Call the function to populate the dropdown but buttons. */
+
 // Pushes parameters to database.
-function pushToDatabase(userId, resort) {
-    let newFavRef = database.ref(userId + '/favorites/' + resort);
+function pushToDatabase(username, resort) {
+    let newFavRef = database.ref(username + '/favorites/' + resort);
     newFavRef.set({
         resort: resort
     });
@@ -22,8 +27,8 @@ function pushToDatabase(userId, resort) {
 }
 
 // Remove a child from the database.
-function removeFromDb(userId, resort) {
-    database.ref(userId + '/favorites/' + resort).remove();
+function removeFromDb(username, resort) {
+    database.ref(username + '/favorites/' + resort).remove();
     $('input').val('');
 }
 

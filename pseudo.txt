@@ -74,18 +74,46 @@ A notification is sent to the user informing them how much snow was received.
 
 
 
-******PSEUDO FOR LIGHT API******
+******PSEUDO FOR MAIN APP****** 
 
-- Receive the weather code from the weather API
+A user enters the page and does not sign in.
 
-    - when I receive a code I check the first number in the code and store that
-        in a variable as the first child to look in in weatherCodes.
-        - I then find the the weather code in the object that matches and pass
-            the parameters into the ajax call.
+The user picks a ski resort from the dropdown list.
 
-- Pass the weather code into an object, 
-    - The object contains the weather codes as keys and light colors, brightness, and descriptions as values.
-    - The object will return the light color API parameters.
+The weather api is called for that location.
+    - The light api is called in the weather ajax call and the light changes
+        color for the weather.
+    - The default weather conditions are returned in an object.
 
-- I make the PUT call to the light using the color parameters.
+The weather condtions object is passed into a function to create a display card.
+    - The function creates a new card
+        - div class='card' and a width
+    - create an img tag with class 'card-img-top'
+    - Add weather icon url to img `http://openweathermap.org/img/wn/${iconId}@2x.png`
+    - append img tag to card
+    - create a div with class='card-body'
+    loop through the object 
+        - Create a div with class='card-text'
+        - Create a header for the data type (wind, rain total etc)
+        - creae a p tag for the data
+        - add the key as header, data as text in p tag.
+        - Append header and p tag to card-text div
+        - Append div to card-body div
+    
+    - Delete whatever is in the div that contains the card
+    - Show the div that contains the card
+    - Add the card to the div that contains it.
 
+
+If a user is signs
+    - show the favorites drop down
+    - If that user has favorites in the database
+        - Call the function to populate the dropdown with buttons.
+
+When a user clicks the favorite icon next to a resort 
+    - Call function to add that resort to the database
+    - Call function to populate the dropdown.
+
+When a user clicks the unfavorite icon next to a favorited resort.
+    - Call function to delete that resort from database
+    - Call function to populate the dropdown
