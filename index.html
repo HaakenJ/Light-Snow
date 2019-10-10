@@ -11,17 +11,35 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
+    <!-- Firebase Realtime Database -->
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-database.js"></script>
+    <!-- Firebase Auth -->
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-auth.js"></script>
 </head>
 
 <body>
-    
-    <div class="container">
-        <div class="row">
-            <div class="col-6 text-center mx-auto" id="inputs">
-                <h3>Enter a ski resort</h3>
-                <input type="text" >
-
-            </div>
+    <img class="background" src="assets/images/background.jpg" alt="Snowy Mouuntains">
+    <br><br>
+        <div class="container">
+            <h1 class="display-4">LIGHT SNOW</h1>
+            <p class="lead">Lets Check The Conditions</p>
+        </div>
+    </div>
+    <br><br><br>
+    <h3>Click on the Ski Resorts dropdown to see the list of resorts</h3>
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Ski Resorts
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Resort 1</a>
+            <a class="dropdown-item" href="#">Resort 2</a>
+            <a class="dropdown-item" href="#">Resort 3</a>
+            <a class="dropdown-item" href="#">Resort 4</a>
+            <a class="dropdown-item" href="#">Resort 5</a>
+            
         </div>
     </div>
 
