@@ -12,11 +12,6 @@ firebase.initializeApp(firebaseConfig);
 
 let database = firebase.database();
 
-/* If a user is signed in
-    - show the favorites drop down
-    - If that user has favorites in the database
-        - Call the function to populate the dropdown but buttons. */
-
 // Pushes parameters to database.
 function pushToDatabase(username, resort) {
     let newFavRef = database.ref(username + '/favorites/' + resort);

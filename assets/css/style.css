@@ -27,6 +27,7 @@ h3 {
 }
 
 /* ************** */
+/* CSS added for animations */
 
 body {
     overflow: hidden;
@@ -51,7 +52,5 @@ svg {
     color: #29ABE2;
     font-family: 'Monoton', cursive;
 }
-
-
 
 /* ************** */
