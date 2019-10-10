@@ -11,10 +11,10 @@ let weatherCodes = {
         },
         201: {
             'params': {
-                'power': 'on',
-                'hue': 280
-                // 'color': 'yellow',
-                // 'brightness': 0.7
+                // 'power': 'on',
+                // 'hue': 280
+                'color': 'yellow',
+                'brightness': 0.7
             },
             'desc': 'thunderstorm with rain',
         },
