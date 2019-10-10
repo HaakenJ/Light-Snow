@@ -2,3 +2,26 @@
     position: relative;
     top: 300px;
 }
+.background {
+    opacity: .5;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+.display-4 {
+    text-align: center;
+    font-weight: bold;
+}
+
+.lead {
+    text-align: center;
+    font-weight: bold;
+}
+
+h3 {
+    text-align: center;
+}
+.dropdown {
+    text-align: center;
+}

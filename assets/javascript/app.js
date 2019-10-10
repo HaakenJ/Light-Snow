@@ -47,5 +47,5 @@ $.ajax({
 
 */
 
-let currentWeather = getWeather("resort");
+let currentWeather = getWeather("48.7767", "121.8144");
 
