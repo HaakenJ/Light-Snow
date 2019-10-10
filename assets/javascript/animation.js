@@ -8,7 +8,7 @@ $('svg').attr('viewBox', `0 0 ${viewWidth} ${viewHeight}`);
 
 console.log($('svg').attr('viewBox'));
 
-$('body').on('click', () => {
+$('body').one('click', () => {
     animate.play();
     removeHeader.play();
     showPage.play();

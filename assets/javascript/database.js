@@ -6,8 +6,34 @@ var firebaseConfig = {
     storageBucket: "lightsnow-32ff9.appspot.com",
     messagingSenderId: "253885354798",
     appId: "1:253885354798:web:d8b109821feaf43e5560bf"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
-  
+let database = firebase.database();
+
+// Pushes parameters to database.
+function pushToDatabase(userId, resort) {
+    let newFavRef = database.ref(userId + '/favorites/' + resort);
+    newFavRef.set({
+        resort: resort
+    });
+    $('input').val('');
+}
+
+// Remove a child from the database.
+function removeFromDb(userId, resort) {
+    database.ref(userId + '/favorites/' + resort).remove();
+    $('input').val('');
+}
+
+$('#add').on('click', (event) => {
+    event.preventDefault();
+    pushToDatabase('kramer', $('input').val());
+    console.log('You clicked');
+})
+$('#remove').on('click', (event) => {
+    event.preventDefault();
+    removeFromDb('kramer', $('input').val());
+    console.log('You removed');
+})
