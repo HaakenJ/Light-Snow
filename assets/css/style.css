@@ -25,3 +25,32 @@ h3 {
 .dropdown {
     text-align: center;
 }
+
+/* ************** */
+
+body {
+    overflow: hidden;
+}
+
+.main-content {
+    opacity: 0;
+}
+svg {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+.snowflake {
+    fill: #29ABE2;
+}
+.opening-header {
+    position: absolute;
+    top: 15%;
+    left: 28%;
+    font-size: 4em;
+    color: #29ABE2;
+}
+
+
+
+/* ************** */
