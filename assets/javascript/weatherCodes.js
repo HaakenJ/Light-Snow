@@ -102,7 +102,6 @@ let weatherCodes = {
                 'hue': 190
             },
             'desc': 'light intensity drizzle',
-
         },
         301: {
             'params': {
@@ -110,7 +109,6 @@ let weatherCodes = {
                 'hue': 200
             },
             'desc': 'drizzle',
-
         },
         302: {
             'params': {
@@ -118,7 +116,6 @@ let weatherCodes = {
                 'hue': 210
             },
             'desc': 'heavy intensity drizzle',
-
         },
         310: {
             'params': {
