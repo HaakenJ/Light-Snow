@@ -1,5 +1,9 @@
 function getWeather(resortLat, resortLon) {
     let weatherCode = "";
+    /* This is the Google Maps url, it will show whatever location is passed in.
+        we will need to change the selector to display it in the proper spot. */
+    $('#map').attr('src', `https://www.google.com/maps/embed/v1/view?key=${MAPS_KEY}
+        &center=${resortLat},${resortLon}&zoom=18&maptype=satellite`);
 
     let apiKey = '050a4a8faf065301b32e5117faf9169a'; // Open Weather cprybell Project-1 API key
 

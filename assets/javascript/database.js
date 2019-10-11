@@ -38,6 +38,3 @@ $('#remove').on('click', (event) => {
     console.log('You removed');
 })
 
-// This is the Google Maps url
-$('#map').attr('src', `https://www.google.com/maps/embed/v1/place?key=${MAPS_KEY}
-&q=Space+Needle,Seattle+WA`)
