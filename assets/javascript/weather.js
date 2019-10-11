@@ -1,13 +1,19 @@
 function getWeather(resortLat, resortLon) {
-    let weatherCode = "";
+    let weatherCode, units;
     /* This is the Google Maps url, it will show whatever location is passed in.
         we will need to change the selector to display it in the proper spot. */
     $('#map').attr('src', `https://www.google.com/maps/embed/v1/view?key=${MAPS_KEY}
-        &center=${resortLat},${resortLon}&zoom=13&maptype=satellite`);
+        &center=${resortLat},${resortLon}&zoom=14&maptype=satellite`);
 
     let apiKey = '050a4a8faf065301b32e5117faf9169a'; // Open Weather cprybell Project-1 API key
 
-    let weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${resortLat}&lon=${resortLon}&APPID=${apiKey}&units=imperial`;
+    if ($('#units').prop('checked')) {
+        units = 'imperial';
+    } else {
+        units = 'metric';
+    }
+
+    let weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${resortLat}&lon=${resortLon}&APPID=${apiKey}&units=${units}`;
 
     $.ajax({
         url: weatherUrl,
@@ -34,9 +40,16 @@ function getCondObj(response) {
     let condObj = {};
 
     condObj['Description'] = response.weather[0].description;
-    condObj['Temperature'] = response.main.temp;
+    if ($('#units').prop('checked')) {
+        condObj['Temperature'] = (response.main.temp + ' F');
+        condObj['Wind Speed'] = (response.wind.speed + ' mph');
+    } else {
+        condObj['Temperature'] = (response.main.temp + ' C');
+        condObj['Wind Speed'] = (response.wind.speed + ' kph');
+    }
+    
     condObj['Humidity'] = response.main.humidity;
-    condObj['Wind Speed'] = (response.wind.speed + ' mph');
+    
     condObj['Wind Direction'] = (response.wind.deg + ' degrees');
 
     console.log(condObj);

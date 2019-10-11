@@ -22,11 +22,18 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <!-- Toggle Switch -->
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.5.0/css/bootstrap4-toggle.min.css"
+        rel="stylesheet">
+
+
     <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
 
 <body>
+
+    <input id="units" type="checkbox" checked data-toggle="toggle" data-on="F&#176" data-off="C&#176">
 
     <div id="test"></div>
 
@@ -40,7 +47,7 @@
             <div class="card-holder"></div>
         </div>
     </div>
-    
+
 
 
     <div class="btn-group">
@@ -55,7 +62,7 @@
     <iframe id="map" width="600" height="450" frameborder="0" style="border:0" src="" allowfullscreen>
     </iframe>
 
-
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.5.0/js/bootstrap4-toggle.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
     <!-- Firebase Realtime Database -->
     <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-database.js"></script>
