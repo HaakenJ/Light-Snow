@@ -1,8 +1,6 @@
 function changeLights(weatherCode) {
     const token = API_TOKEN;
 
-    // weatherCode = weatherCode.toString();
-
     var weatherCat = weatherCode[0];
 
     if (codes[weatherCat][weatherCode].effectUrl) {
@@ -14,7 +12,8 @@ function changeLights(weatherCode) {
             method: 'POST',
             data: codes[weatherCat][weatherCode].effectParams
         }).then((response) => {
-            console.log('The light is on with effects!');
+            console.log(codes[weatherCat][weatherCode].effectUrl);
+            console.log(codes[weatherCat][weatherCode].effectParams);
             console.log(response);
         })
     } else {
@@ -26,7 +25,7 @@ function changeLights(weatherCode) {
             method: 'PUT',
             data: codes[weatherCat][weatherCode].params
         }).then((response) => {
-            console.log('The light is on! With no effects.');
+            console.log(codes[weatherCat][weatherCode].params);
             console.log(response);
         })
     }

@@ -165,4 +165,20 @@ let skiResorts = {
         long: "-121.6652",
         'tz': 'America/Los_Angeles'
     },
+    'heavy-thunderstorm': {
+        'test': true,
+        'code': 212
+    },
+    'extreme-rain': {
+        'test': true,
+        'code': 504
+    },
+    'heavy-snow': {
+        'test': true,
+        'code': 602
+    },
+    'tornado': {
+        'test': true,
+        'code': 781
+    }
 }

@@ -2,7 +2,7 @@ let codes = {
     2: {
         200: {
             'params': {
-                'color': 'purple',
+                'color': 'yellow',
                 'brightness': '0.4'
             },
             'desc': 'thunderstorm with light rain',
@@ -20,8 +20,14 @@ let codes = {
         },
         202: {
             'params': {
-                'color': 'red',
+                'color': 'yellow',
                 'brightness': '0.9'
+            },
+            'effectUrl': 'https://api.lifx.com/v1/lights/all/effects/pulse',
+            'effectParams': {
+                'power_on': true,
+                'color': 'yellow',
+                'period': 1
             },
             'desc': 'thunderstorm with heavy rain',
 
@@ -44,8 +50,14 @@ let codes = {
         },
         212: {
             'params': {
-                'color': 'red',
+                'color': 'yellow',
                 'brightness': '1.0'
+            },
+            'effectUrl': 'https://api.lifx.com/v1/lights/all/effects/pulse',
+            'effectParams': {
+                'power_on': true,
+                'color': 'yellow',
+                'period': 1
             },
             'desc': 'heavy thunderstorm',
 
@@ -187,6 +199,12 @@ let codes = {
                 'color': 'blue',
                 'brightness': '0.9'
             },
+            'effectUrl': 'https://api.lifx.com/v1/lights/all/effects/pulse',
+            'effectParams': {
+                'power_on': true,
+                'color': 'blue',
+                'period': 1
+            },
             'desc': 'very heavy rain',
 
         },
@@ -194,6 +212,12 @@ let codes = {
             'params': {
                 'color': 'blue',
                 'brightness': '1.0'
+            },
+            'effectUrl': 'https://api.lifx.com/v1/lights/all/effects/pulse',
+            'effectParams': {
+                'power_on': true,
+                'color': 'blue',
+                'period': 0.5
             },
             'desc': 'extreme rain',
 
@@ -253,6 +277,12 @@ let codes = {
                 'color': 'green',
                 'brightness': '0.9'
             },
+            'effectUrl': 'https://api.lifx.com/v1/lights/all/effects/pulse',
+            'effectParams': {
+                'power_on': true,
+                'color': 'green',
+                'period': 1
+            },
             'desc': 'snow',
 
         },
@@ -260,6 +290,12 @@ let codes = {
             'params': {
                 'color': 'green',
                 'brightness': '1.0'
+            },
+            'effectUrl': 'https://api.lifx.com/v1/lights/all/effects/pulse',
+            'effectParams': {
+                'power_on': true,
+                'color': 'green',
+                'period': 0.5
             },
             'desc': 'heavy snow',
 
@@ -343,6 +379,12 @@ let codes = {
                 'color': 'orange',
                 'brightness': '0.4'
             },
+            'effectUrl': 'https://api.lifx.com/v1/lights/all/effects/pulse',
+            'effectParams': {
+                'power_on': true,
+                'color': 'orange',
+                'period': 1
+            },
             'desc': 'smoke',
 
         },
@@ -391,6 +433,12 @@ let codes = {
                 'color': 'orange',
                 'brightness': '0.8'
             },
+            'effectUrl': 'https://api.lifx.com/v1/lights/all/effects/pulse',
+            'effectParams': {
+                'power_on': true,
+                'color': 'orange',
+                'period': 0.5
+            },
             'desc': 'volcanic ash',
 
         },
@@ -399,6 +447,12 @@ let codes = {
                 'color': 'orange',
                 'brightness': '0.6'
             },
+            'effectUrl': 'https://api.lifx.com/v1/lights/all/effects/pulse',
+            'effectParams': {
+                'power_on': true,
+                'color': 'orange',
+                'period': 0.5
+            },
             'desc': 'squalls',
 
         },
@@ -406,6 +460,12 @@ let codes = {
             'params': {
                 'color': 'red',
                 'brightness': '1.0'
+            },
+            'effectUrl': 'https://api.lifx.com/v1/lights/all/effects/pulse',
+            'effectParams': {
+                'power_on': true,
+                'color': 'red',
+                'period': 0.2
             },
             'desc': 'tornado',
 

@@ -9,15 +9,19 @@ function getCondObj(response) {
         condObj['Temperature'] = (response.main.temp + ' C');
         condObj['Wind Speed'] = (response.wind.speed + ' kph');
     }
-    
+
     condObj['Humidity'] = (response.main.humidity + '%');
-    
+
     condObj['Wind Direction'] = (response.wind.deg + ' degrees');
 
     console.log(condObj);
 
     return condObj;
 }
+
+
+
+
 
 
 function createCard(iconId, condObj, bgColor, timezone) {
@@ -63,44 +67,59 @@ function createCard(iconId, condObj, bgColor, timezone) {
     $('.card-holder').append(newCard);
 }
 
+
+
+
+
+
 function getWeather(resortLat, resortLon, resortName) {
     let weatherCode, units;
-    /* This is the Google Maps url, it will show whatever location is passed in.
-        we will need to change the selector to display it in the proper spot. */
-    $('#map').attr('src', `https://www.google.com/maps/embed/v1/view?key=${MAPS_KEY}
-        &center=${resortLat},${resortLon}&zoom=14&maptype=satellite`);
 
-    let apiKey = '050a4a8faf065301b32e5117faf9169a'; // Open Weather cprybell Project-1 API key
+    let apiKey = WEATHER_KEY; // Open Weather cprybell Project-1 API key
 
+    // Check what units to use.
     if ($('#units').prop('checked')) {
         units = 'imperial';
     } else {
         units = 'metric';
     }
 
+    // Create URL for weather api
     let weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${resortLat}&lon=${resortLon}&APPID=${apiKey}&units=${units}`;
 
-    $.ajax({
-        url: weatherUrl,
-        method: 'GET'
-    }).then((response) => {
-        console.log('Api has been called.');
-        console.log(response);
-        console.log(JSON.stringify(response));
-        console.log(response.weather[0].id);
-
-        weatherCode = response.weather[0].id;
+    // Check if the clicked item is a test case or a real resort.
+    if (skiResorts[resortName].test) {
+        weatherCode = skiResorts[resortName].code;
         weatherCode = weatherCode.toString();
-        let iconId = response.weather[0].icon,
-            bgColor = codes[weatherCode[0]][weatherCode].params.color,
-            timezone = skiResorts[resortName].tz;
-
-        createCard(iconId, getCondObj(response), bgColor, timezone);
-
-
         changeLights(weatherCode);
-    })
+    } else {
+        //Call weather API
+        $.ajax({
+            url: weatherUrl,
+            method: 'GET'
+        }).then((response) => {
+            console.log('Api has been called.');
+            console.log(response.weather[0].id);
+
+            /* This is the Google Maps url, it will show whatever location is 
+            passed in. We will need to change the selector to display it in the
+            proper spot. */
+            $('#map').attr('src', `https://www.google.com/maps/embed/v1/view?key=${MAPS_KEY}&center=${resortLat},${resortLon}&zoom=14&maptype=satellite`);
+            
+            // Get the weather code and convert to string.
+            weatherCode = response.weather[0].id;
+            weatherCode = weatherCode.toString();
+            /* Get the icon, light color to use as background for card,
+            and timezone. */
+            let iconId = response.weather[0].icon,
+                bgColor = codes[weatherCode[0]][weatherCode].params.color,
+                timezone = skiResorts[resortName].tz;
+
+            // Create and display the card showing weather conditions.
+            createCard(iconId, getCondObj(response), bgColor, timezone);
+
+            // Change the color and effect of the light.
+            changeLights(weatherCode);
+        })
+    }
 }
-
-
-
