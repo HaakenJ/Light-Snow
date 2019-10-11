@@ -1,18 +1,18 @@
 function changeLights(weatherCode) {
     const token = API_TOKEN;
 
-    weatherCode = weatherCode.toString();
+    // weatherCode = weatherCode.toString();
 
     var weatherCat = weatherCode[0];
 
-    if (weatherCodes[weatherCat][weatherCode].effectUrl) {
+    if (codes[weatherCat][weatherCode].effectUrl) {
         $.ajax({
             headers: {
                 'Authorization': `Bearer ${token}`
             },
-            url: weatherCodes[weatherCat][weatherCode].effectUrl,
+            url: codes[weatherCat][weatherCode].effectUrl,
             method: 'POST',
-            data: weatherCodes[weatherCat][weatherCode].effectParams
+            data: codes[weatherCat][weatherCode].effectParams
         }).then((response) => {
             console.log('The light is on with effects!');
             console.log(response);
@@ -24,7 +24,7 @@ function changeLights(weatherCode) {
             },
             url: 'https://api.lifx.com/v1/lights/all/state',
             method: 'PUT',
-            data: weatherCodes[weatherCat][weatherCode].params
+            data: codes[weatherCat][weatherCode].params
         }).then((response) => {
             console.log('The light is on! With no effects.');
             console.log(response);

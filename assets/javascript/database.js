@@ -1,5 +1,5 @@
 var firebaseConfig = {
-    apiKey: "AIzaSyBQJtNCS5HMLu4y7RCp5Og7D3DBDzh9O18",
+    apiKey: FIREBASE_KEY,
     authDomain: "lightsnow-32ff9.firebaseapp.com",
     databaseURL: "https://lightsnow-32ff9.firebaseio.com",
     projectId: "lightsnow-32ff9",
@@ -12,19 +12,19 @@ firebase.initializeApp(firebaseConfig);
 
 let database = firebase.database();
 
+// Get resort in click function with $(this).val()
+
 // Pushes parameters to database.
 function pushToDatabase(username, resort) {
     let newFavRef = database.ref(username + '/favorites/' + resort);
     newFavRef.set({
         resort: resort
     });
-    $('input').val('');
 }
 
 // Remove a child from the database.
 function removeFromDb(username, resort) {
     database.ref(username + '/favorites/' + resort).remove();
-    $('input').val('');
 }
 
 $('#add').on('click', (event) => {
@@ -37,3 +37,4 @@ $('#remove').on('click', (event) => {
     removeFromDb('kramer', $('input').val());
     console.log('You removed');
 })
+

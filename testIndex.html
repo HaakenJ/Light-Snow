@@ -10,19 +10,28 @@
     <!-- <script type="text/javascript" src="assets/python/brython/brython.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.7.5/brython_stdlib.js"> -->
     </script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 </head>
 <!-- onload="brython()" -->
 
-    <input type="text" id="testInput">
-    <button type="submit" id="add">Click to Submit</button>
-    <button type="submit" id="remove">Click to Remove</button>
+<input type="text" id="testInput">
+<button type="submit" id="add">Click to Submit</button>
+<button type="submit" id="remove">Click to Remove</button>
+<div class="container">
+    <div class="row">
+        <div class="card-holder"></div>
+    </div>
+</div>
+
 
 <body>
 
     <div id="test"></div>
 
-    <!-- <script type="text/python" src="assets/python/lights.py"></script> -->
+    
     <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
     <!-- Firebase Realtime Database -->
     <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-database.js"></script>

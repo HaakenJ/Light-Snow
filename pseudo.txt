@@ -105,7 +105,7 @@ The weather condtions object is passed into a function to create a display card.
     - Add the card to the div that contains it.
 
 
-If a user is signs
+If a user is signed in
     - show the favorites drop down
     - If that user has favorites in the database
         - Call the function to populate the dropdown with buttons.

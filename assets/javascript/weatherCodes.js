@@ -1,4 +1,4 @@
-let weatherCodes = {
+let codes = {
     2: {
         200: {
             'params': {
