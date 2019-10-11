@@ -14,6 +14,6 @@ function getWeather(resortLat, resortLon) {
         console.log(JSON.stringify(response));
         console.log(response.weather[0].id);
         weatherCode = response.weather[0].id;
-        return weatherCode;
+        changeLights(weatherCode);
     })
 }

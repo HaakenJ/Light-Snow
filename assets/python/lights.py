@@ -296,31 +296,10 @@ weatherCodes = {
     }
 }
 
-# Search GitHub's repo's for requests.
-# Can also pass params as list of tuples.
-# To customize headers pass a dictionary of HTTP headers to get() using the
-# headers parameter.
-
-# response = requests.get(
-#     'https://api.openweathermap.org/data/2.5/weather',
-#     params={
-#         'apiKey': 'fcc4fbbfbe4762dbfc16ec66805a4ded',
-#         'q': 'seattle',
-#         }
-#     )
 
 
-# Turn on lights.
-token = 'cea0036c68cff741a8d5dbc6e1cbfb998f099b1daa88d19807365863ee55128c'
-oWKey = 'fcc4fbbfbe4762dbfc16ec66805a4ded'
+token = ''
 
-weatherResp = requests.get(
-    f'https://api.openweathermap.org/data/2.5/weather',
-    params={
-        'apiKey': 'oWKey,
-        'q': 'seattle',
-    }
-)
 
 
 lightPut = requests.put(
@@ -328,7 +307,8 @@ lightPut = requests.put(
     headers={'Authorization': f'Bearer {token}', },
     data={
         'power': 'on',
-        'color': 'blue'
+        'hue': '120',
+        'saturation': '1.0'
     }
 )
 
@@ -338,13 +318,13 @@ lightPut = requests.put(
 # else:
 # The above method does not check if the code is 200 because 204-NO CONTENT
 # and 304-NOT MODIFIED also evaluate to TRUE
-if response.status_code == 200:
-    print('Success!')
-    print(response.json())
-elif response.status_code == 404:
-    print('Not Found.')
+# if response.status_code == 200:
+#     print('Success!')
+#     print(response.json())
+# elif response.status_code == 404:
+#     print('Not Found.')
 
-print(response.json())
+# print(response.json())
 
-if __name__ == "__main__":
-    print(response.json())
+# if __name__ == "__main__":
+#     print(response.json())
