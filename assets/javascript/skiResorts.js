@@ -5,7 +5,8 @@ let skiResorts = {
     },
     'whistler': {
         lat: "50.1150",
-        long: "-122.9486"
+        long: "-122.9486",
+        'tz': 'America/Los_Angeles'
     },
     'northstar': {
         lat: "39.2746",
@@ -77,7 +78,8 @@ let skiResorts = {
     },
     'stevens-pass': {
         lat: "47.7448",
-        long: "-121.0890"
+        long: "-121.0890",
+        'tz': 'America/Los_Angeles'
     },
     'mount-snow': {
         lat: "42.9602",
@@ -145,18 +147,22 @@ let skiResorts = {
     },
     'mount-baker': {
         lat: "48.8573",
-        long: "-121.6667"
+        long: "-121.6667",
+        'tz': 'America/Los_Angeles'
     },
     'crystal-mountain': {
         lat: "46.9361",
-        long: "-121.4753"
+        long: "-121.4753",
+        'tz': 'America/Los_Angeles'
     },
     'snoqualmie-pass': {
         lat: "47.4107",
-        long: "-121.4114"
+        long: "-121.4114",
+        'tz': 'America/New_York'
     },
     'mount-hood-meadows': {
         lat: "45.3318",
-        long: "-121.6652"
+        long: "-121.6652",
+        'tz': 'America/Los_Angeles'
     },
 }

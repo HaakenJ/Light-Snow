@@ -34,6 +34,6 @@ $(document).ready(() => {
             lat = skiResorts[resortName].lat,
             lon = skiResorts[resortName].long;
 
-        getWeather(lat, lon);
+        getWeather(lat, lon, resortName);
     })
 })
