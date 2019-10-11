@@ -117,3 +117,8 @@ When a user clicks the favorite icon next to a resort
 When a user clicks the unfavorite icon next to a favorited resort.
     - Call function to delete that resort from database
     - Call function to populate the dropdown
+
+******STILL TO DO******
+
+Add dropdown to index
+add divs for cards, map, toggle switch

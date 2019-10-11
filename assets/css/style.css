@@ -1,3 +1,4 @@
+
 #inputs {
     position: relative;
     top: 300px;
@@ -9,22 +10,22 @@
     width: 100%;
     z-index: -1;
 }
-.display-4 {
+.display-4,
+.lead,
+h3,
+.dropdown {
     text-align: center;
+}
+
+.display-4 {
     font-weight: bold;
 }
 
 .lead {
-    text-align: center;
     font-weight: bold;
 }
 
-h3 {
-    text-align: center;
-}
-.dropdown {
-    text-align: center;
-}
+
 
 /* ************** */
 /* CSS added for animations */
@@ -51,6 +52,13 @@ svg {
     font-size: 4em;
     color: #29ABE2;
     font-family: 'Monoton', cursive;
+}
+@media screen and (max-width: 1130px) {
+    .opening-header {
+        position: absolute;
+        top: 35%;
+        left: 10%;
+    }
 }
 
 /* ************** */

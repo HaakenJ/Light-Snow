@@ -50,18 +50,11 @@
         <br><br><br>
         <h3>Click on the Ski Resorts dropdown to see the list of resorts</h3>
         <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Ski Resorts
+            <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
+                Pick a Resort
             </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Resort 1</a>
-                <a class="dropdown-item" href="#">Resort 2</a>
-                <a class="dropdown-item" href="#">Resort 3</a>
-                <a class="dropdown-item" href="#">Resort 4</a>
-                <a class="dropdown-item" href="#">Resort 5</a>
-
-            </div>
+            <ul class="dropdown-menu scrollable-menu bg-secondary" role="menu" id="resorts">
+            </ul>
         </div>
     </div>
 
@@ -76,8 +69,12 @@
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <!-- Moment.js -->
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <!-- Moment.js timezones -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.26/moment-timezone-with-data.js"></script>
     <!-- Anime.js -->
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script>
+    <!-- API Keys -->
+    <script src="config.js"></script>
     <!-- Firebase database functions -->
     <script src="assets/javascript/database.js"></script>
     <!-- Animation script -->

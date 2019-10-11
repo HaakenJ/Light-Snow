@@ -1,6 +1,6 @@
 function addResorts(resortObj) {
     Object.keys(resortObj).forEach((resort) => {
-        let newListItem = $('<li>').addClass('dropdown-item'),
+        let newListItem = $('<li>').addClass('dropdown-item text-white'),
             newATag = $('<a>');
 
         newATag.text(capitalizeFirst(addSpaces(resort)));
