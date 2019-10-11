@@ -3,7 +3,7 @@ function getWeather(resortLat, resortLon) {
     /* This is the Google Maps url, it will show whatever location is passed in.
         we will need to change the selector to display it in the proper spot. */
     $('#map').attr('src', `https://www.google.com/maps/embed/v1/view?key=${MAPS_KEY}
-        &center=${resortLat},${resortLon}&zoom=18&maptype=satellite`);
+        &center=${resortLat},${resortLon}&zoom=13&maptype=satellite`);
 
     let apiKey = '050a4a8faf065301b32e5117faf9169a'; // Open Weather cprybell Project-1 API key
 
@@ -79,15 +79,3 @@ function createCard(iconId, condObj, bgColor) {
     $('.card-holder').append(newCard);
 }
 
-// Icon with light color as background
-// iconId = response.weather[0].icon
-// url http://openweathermap.org/img/wn/${iconId}@2x.png
-// Weather description
-// response.weather[0].description
-// temperature
-// response.main.temp
-// humidity
-// response.main.humidity
-// Wind speed and direction
-// response.wind.speed
-// response.wind.deg

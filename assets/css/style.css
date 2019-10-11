@@ -30,7 +30,7 @@ h3 {
 /* CSS added for animations */
 
 body {
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .main-content {
@@ -54,3 +54,11 @@ svg {
 }
 
 /* ************** */
+/* CSS for scrollable menu */
+
+.scrollable-menu {
+    height: 200px;
+    overflow-y: scroll;
+}
+
+/* ********* */
