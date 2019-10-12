@@ -72,9 +72,6 @@ function createCard(iconId, condObj, bgColor, timezone) {
 }
 
 
-
-
-
 /* Main API function.  Pass in lat long and name to call weather API, get the
     weather code and conditions, create a card, show the location on the map,
     then call the light change API */
