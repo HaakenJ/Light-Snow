@@ -1,6 +1,7 @@
-body {
-    background-image: url('assets/images/background.jpg');
-}
+
+
+
+
 
 #inputs {
     position: relative;
@@ -15,16 +16,64 @@ body {
     z-index: -1;
 }
 
-.display-4 {
+.display-4,
+.lead,
+h3,
+.dropdown {
     text-align: center;
+}
+
+.display-4 {
     font-weight: bold;
 }
 
 .lead {
-    text-align: center;
     font-weight: bold;
 }
 
-h3 {
-    text-align: center;
+
+
+/* ************** */
+/* CSS added for animations */
+
+body {
+    overflow-x: hidden;
 }
+
+
+.main-content {
+    opacity: 0;
+}
+svg {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+.snowflake {
+    fill: #29ABE2;
+}
+.opening-header {
+    position: absolute;
+    top: 15%;
+    left: 28%;
+    font-size: 4em;
+    color: #29ABE2;
+    font-family: 'Monoton', cursive;
+}
+@media screen and (max-width: 1130px) {
+    .opening-header {
+        position: absolute;
+        top: 35%;
+        left: 10%;
+    }
+}
+
+/* ************** */
+/* CSS for scrollable menu */
+
+.scrollable-menu {
+    height: 200px;
+    overflow-y: scroll;
+}
+
+
