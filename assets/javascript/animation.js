@@ -50,6 +50,7 @@ var removeHeader = anime({
 $('body').one('click', () => {
     animateSnowflake.play();
     removeHeader.play();
+    $('.main-content').show();
     showPage.play();
 })
 
