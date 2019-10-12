@@ -1,8 +1,13 @@
 
+
+
+
+
 #inputs {
     position: relative;
     top: 300px;
 }
+
 .background {
     opacity: .5;
     position: fixed;
@@ -10,6 +15,7 @@
     width: 100%;
     z-index: -1;
 }
+
 .display-4,
 .lead,
 h3,
@@ -33,6 +39,7 @@ h3,
 body {
     overflow-x: hidden;
 }
+
 
 .main-content {
     opacity: 0;
@@ -69,4 +76,4 @@ svg {
     overflow-y: scroll;
 }
 
-/* ********* */
+

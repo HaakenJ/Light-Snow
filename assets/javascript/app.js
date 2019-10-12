@@ -1,4 +1,3 @@
-
 /* When the page is ready, load resorts into dropdown, add a map centered on
     our class, and set a click function for the resorts to call the getWeather
     function. */
