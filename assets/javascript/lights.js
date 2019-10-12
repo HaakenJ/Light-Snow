@@ -1,22 +1,26 @@
+
+// Function to call the light API and change the color and effect of the light.
 function changeLights(weatherCode) {
+    // Key in config.js
     const token = API_TOKEN;
-
-    weatherCode = weatherCode.toString();
-
+    // Get first number in the weather code.
     var weatherCat = weatherCode[0];
-
-    if (weatherCodes[weatherCat][weatherCode].effectUrl) {
+    /* Check if the weather for that code contains effects.  If it does, make
+        a POST call using the effect parameters. */
+    if (codes[weatherCat][weatherCode].effectUrl) {
         $.ajax({
             headers: {
                 'Authorization': `Bearer ${token}`
             },
-            url: weatherCodes[weatherCat][weatherCode].effectUrl,
+            url: codes[weatherCat][weatherCode].effectUrl,
             method: 'POST',
-            data: weatherCodes[weatherCat][weatherCode].effectParams
+            data: codes[weatherCat][weatherCode].effectParams
         }).then((response) => {
-            console.log('The light is on with effects!');
+            console.log(codes[weatherCat][weatherCode].effectUrl);
+            console.log(codes[weatherCat][weatherCode].effectParams);
             console.log(response);
         })
+    // If no effects make a PUT call to the light usign the correct parameters.
     } else {
         $.ajax({
             headers: {
@@ -24,9 +28,9 @@ function changeLights(weatherCode) {
             },
             url: 'https://api.lifx.com/v1/lights/all/state',
             method: 'PUT',
-            data: weatherCodes[weatherCat][weatherCode].params
+            data: codes[weatherCat][weatherCode].params
         }).then((response) => {
-            console.log('The light is on! With no effects.');
+            console.log(codes[weatherCat][weatherCode].params);
             console.log(response);
         })
     }

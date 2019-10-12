@@ -9,6 +9,15 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
     <!-- Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- font -->
@@ -28,7 +37,7 @@
             155.26,134.6 194.06,154.59 200,145.41 161.07,125.35" />
 
     </svg>
-    <div class="opening-header">CLICK ANYWEHRE TO START</div>
+    <div class="opening-header">CLICK ANYWHERE TO START</div>
 
     <!-- Main content to show after a user clicks the page and snowflake is animated -->
     <div class="main-content">
@@ -41,21 +50,14 @@
         <br><br><br>
         <h3>Click on the Ski Resorts dropdown to see the list of resorts</h3>
         <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Ski Resorts
+            <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
+                Pick a Resort
             </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Resort 1</a>
-                <a class="dropdown-item" href="#">Resort 2</a>
-                <a class="dropdown-item" href="#">Resort 3</a>
-                <a class="dropdown-item" href="#">Resort 4</a>
-                <a class="dropdown-item" href="#">Resort 5</a>
-
-            </div>
+            <ul class="dropdown-menu scrollable-menu bg-secondary" role="menu" id="resorts">
+            </ul>
         </div>
     </div>
-    
+
     <!-- Firebase Main App -->
     <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
     <!-- Firebase Realtime Database -->
@@ -67,18 +69,26 @@
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <!-- Moment.js -->
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <!-- Moment.js timezones -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.26/moment-timezone-with-data.js"></script>
     <!-- Anime.js -->
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script>
+    <!-- API Keys -->
+    <script src="config.js"></script>
     <!-- Firebase database functions -->
     <script src="assets/javascript/database.js"></script>
     <!-- Animation script -->
     <script src="assets/javascript/animation.js"></script>
+    <!-- ski resorts object -->
+    <script src="assets/javascript/skiResorts.js"></script>
     <!-- weatherCodes object -->
     <script src="assets/javascript/weatherCodes.js"></script>
     <!-- Light api script -->
     <script src="assets/javascript/lights.js"></script>
     <!-- Weather api script -->
     <script src="assets/javascript/weather.js"></script>
+    <!-- Functions to act on the text of the page. -->
+    <script src="assets/javascript/textFunctions.js"></script>
     <!-- Main app.js -->
     <script src="assets/javascript/app.js"></script>
 </body>

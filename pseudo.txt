@@ -105,7 +105,7 @@ The weather condtions object is passed into a function to create a display card.
     - Add the card to the div that contains it.
 
 
-If a user is signs
+If a user is signed in
     - show the favorites drop down
     - If that user has favorites in the database
         - Call the function to populate the dropdown with buttons.
@@ -117,3 +117,8 @@ When a user clicks the favorite icon next to a resort
 When a user clicks the unfavorite icon next to a favorited resort.
     - Call function to delete that resort from database
     - Call function to populate the dropdown
+
+******STILL TO DO******
+
+Add dropdown to index
+add divs for cards, map, toggle switch

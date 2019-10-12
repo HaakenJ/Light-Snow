@@ -1,51 +1,21 @@
-/* Basic format we can use for resorts, all lowercase and one word so that 
-    we can convert any input into lowercase with no spaces.*/
 
-//let resorts = ['aspen'];
+/* When the page is ready, load resorts into dropdown, add a map centered on
+    our class, and set a click function for the resorts to call the getWeather
+    function. */
+$(document).ready(() => {
+    addResorts(skiResorts);
+    /* ************************************************* */
+    $('#map').attr('src', `https://www.google.com/maps/embed/v1/view?key=${MAPS_KEY}
+    &center=47.608868,-122.335884&zoom=18&maptype=satellite`);
+    /* ************************************************* */
 
-//let apiKey = '050a4a8faf065301b32e5117faf9169a'; // Open Weather cprybell Project-1 API key
+    /* ************************************************* */
+    $('.dropdown-item').on('click', function() {
+    /* ************************************************* */
+        let resortName = $(this).attr('data-name'),
+            lat = skiResorts[resortName].lat,
+            lon = skiResorts[resortName].long;
 
-//let weatherCode = "";
-
-// This will return the UNIX timestamp from 8 hours ago.
-//let queryTime = moment().subtract(8, 'hours').format('X');
-
-//console.log(queryTime);
-
-
-/* When requesting a forecast for a previous time, the hourly forecast returned
-    is for the full 24 hours of the day requested, regardless of the specific
-    time that was requested.  We will need to somehow pick out only the 8-12
-    hours prior to the current time. */
-
-// A test url for the summit of crystal mountain.
-//let weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=zermatt&APPID=${apiKey}`;
-//api.openweathermap.org/data/2.5/weather?q={city name},{country code}
-
-/*
-$.ajax({
-    url: weatherUrl,
-    method: 'GET'
-}).then((response) => {
-    let lastEight = {},
-        hourIndex = 1;
-    console.log('Api has been called.');
-
-    console.log(response);
-    console.log(JSON.stringify(response));
-    console.log(response.weather[0].id);
-    weatherCode = response.weather[0].id;
-    // response.hourly.data.forEach((hour) => {
-    //     if (hour.time >= queryTime) {
-    //         lastEight[hourIndex] = hour;
-    //         hourIndex++
-    //     }
-    // })
-    //console.log('Number of hours: ' + hourIndex);
-    //console.log(lastEight)
+        getWeather(lat, lon, resortName);
+    })
 })
-
-*/
-
-let currentWeather = getWeather("48.7767", "121.8144");
-

@@ -1,20 +1,11 @@
+// Set the size of the svg according to the size of the viewport when opened.
 var viewHeight = window.innerHeight,
     viewWidth = window.innerWidth;
-console.log(viewHeight, viewWidth);
-
-console.log($('svg').attr('viewBox'));
 
 $('svg').attr('viewBox', `0 0 ${viewWidth} ${viewHeight}`);
 
-console.log($('svg').attr('viewBox'));
-
-$('body').one('click', () => {
-    animate.play();
-    removeHeader.play();
-    showPage.play();
-})
-
-var animate =
+// Animate for snowflake to grow larger and disappear.
+var animateSnowflake =
     anime({
         targets: '.snowflake',
         points: [{
@@ -35,6 +26,8 @@ var animate =
         autoplay: false
     });
 
+/* Animation for the main content of the page to appear after a delay to let
+    the snowflake finish. */ 
 var showPage = anime({
     targets: '.main-content',
     opacity: 1,
@@ -44,6 +37,7 @@ var showPage = anime({
     autoplay: false
 });
 
+// Animation to make the header on the opening page disappear.
 var removeHeader = anime({
     targets: '.opening-header',
     opacity: 0,
@@ -51,3 +45,12 @@ var removeHeader = anime({
     loop: false,
     autoplay: false
 })
+
+// Click anywhere on the body of the page to animate the svg.
+$('body').one('click', () => {
+    animateSnowflake.play();
+    removeHeader.play();
+    showPage.play();
+})
+
+
