@@ -10,14 +10,17 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <!-- Toggle Switch -->
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.5.0/css/bootstrap4-toggle.min.css"
+        rel="stylesheet">
     <!-- Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- font -->
@@ -42,32 +45,45 @@
 
     <!-- Main content to show after a user clicks the page and snowflake is animated -->
     <div class="main-content">
-        <img class="background" src="assets/images/background.jpg" alt="Snowy Mouuntains">
+        <img class="background" src="assets/images/background.jpg" alt="Snowy Mountains">
         <br><br>
         <div class="container">
-            <h1 class="display-4">LIGHT SNOW</h1>
-            <p class="lead">Lets Check The Conditions</p>
+            <div class="row">
+                <div class="col-1 float-right">
+                    <input id="units" type="checkbox" checked data-toggle="toggle" data-onstyle="secondary" data-on="F&#176" data-off="C&#176">
+                </div>
+                <div class="col-11">
+                    <h1 class="display-4">LIGHT SNOW</h1>
+                    <p class="lead">Lets Check The Conditions</p>
+                </div>
+            </div>
         </div>
-        <br><br><br>
+        <div class="container">
 
-        <h3>Click on the Ski Resorts dropdown to see the list of resorts</h3>
-        <div class="dropdown">
-            <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
-                Pick a Resort
-            </button>
-            <ul class="dropdown-menu scrollable-menu bg-secondary" role="menu" id="resorts">
-            </ul>
+
         </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-6">
+        <br>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
+                            Pick a Resort
+                        </button>
+                        <ul class="dropdown-menu scrollable-menu bg-secondary" role="menu" id="resorts">
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <iframe id="map" width="100%" height="400" frameborder="0" style="border:0" src="" allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="col-3">
+                    <div class="card-holder"></div>
+                </div>
 
             </div>
-            <div class="col-6">
-                
-            </div>
-
         </div>
     </div>
     </div>
@@ -90,6 +106,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.26/moment-timezone-with-data.js"></script>
     <!-- Anime.js -->
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script>
+    <!-- Toggle Button js -->
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.5.0/js/bootstrap4-toggle.min.js"></script>
     <!-- API Keys -->
     <script src="config.js"></script>
     <!-- Firebase database functions -->

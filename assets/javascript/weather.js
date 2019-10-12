@@ -30,9 +30,9 @@ function createCard(iconId, condObj, bgColor, timezone) {
         image = $('<img>').addClass('card-img-top'),
         newBody = $('<div>').addClass('card-body'),
         timeHeader = $('<h5>').addClass('card-title'),
-        time = $('<p>').addClass('card-text mb-2');
+        time = $('<p>').addClass('card-text');
 
-    newCard.css('width', '20rem;');
+    newCard.css('width', '10rem;');
 
     image.attr('src', `http://openweathermap.org/img/wn/${iconId}@2x.png`);
     image.attr('alt', condObj['Description']);
@@ -48,7 +48,7 @@ function createCard(iconId, condObj, bgColor, timezone) {
     for (var condition in condObj) {
         let newCond = $('<div>').addClass('card-text'),
             header = $('<h5>').addClass('card-title'),
-            content = $('<p>').addClass('card-text mb-2');
+            content = $('<p>').addClass('card-text');
 
         header.text(condition);
         content.text(condObj[condition]);
