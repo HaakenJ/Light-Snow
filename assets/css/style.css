@@ -76,6 +76,10 @@ svg {
     overflow-y: scroll;
 }
 
+.dropdown-item:hover {
+    background-color: black;
+}
+
 .card-holder {
     width: 12rem;
 }
