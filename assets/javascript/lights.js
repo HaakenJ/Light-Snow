@@ -1,8 +1,12 @@
+
+// Function to call the light API and change the color and effect of the light.
 function changeLights(weatherCode) {
+    // Key in config.js
     const token = API_TOKEN;
-
+    // Get first number in the weather code.
     var weatherCat = weatherCode[0];
-
+    /* Check if the weather for that code contains effects.  If it does, make
+        a POST call using the effect parameters. */
     if (codes[weatherCat][weatherCode].effectUrl) {
         $.ajax({
             headers: {
@@ -16,6 +20,7 @@ function changeLights(weatherCode) {
             console.log(codes[weatherCat][weatherCode].effectParams);
             console.log(response);
         })
+    // If no effects make a PUT call to the light usign the correct parameters.
     } else {
         $.ajax({
             headers: {

@@ -1,7 +1,10 @@
+/* Function to create an object of the current weather conditions pulled from
+    an API response. */
 function getCondObj(response) {
     let condObj = {};
-
+    
     condObj['Description'] = response.weather[0].description;
+    // Check what units to use.
     if ($('#units').prop('checked')) {
         condObj['Temperature'] = (response.main.temp + ' F');
         condObj['Wind Speed'] = (response.wind.speed + ' mph');
@@ -9,9 +12,7 @@ function getCondObj(response) {
         condObj['Temperature'] = (response.main.temp + ' C');
         condObj['Wind Speed'] = (response.wind.speed + ' kph');
     }
-
     condObj['Humidity'] = (response.main.humidity + '%');
-
     condObj['Wind Direction'] = (response.wind.deg + ' degrees');
 
     console.log(condObj);
@@ -23,7 +24,7 @@ function getCondObj(response) {
 
 
 
-
+/* Create a card displaying the current weather conditions passed in.*/
 function createCard(iconId, condObj, bgColor, timezone) {
     let newCard = $('<div>').addClass('card text-center'),
         image = $('<img>').addClass('card-img-top'),
@@ -59,23 +60,29 @@ function createCard(iconId, condObj, bgColor, timezone) {
     }
     newCard.append(newBody);
 
+    // Code to change for index.html
+    /* ********************************** */
     // Line goes here to delete whatever is currently in the card holding div.
     $('.card-holder').empty();
     // Line goes here to show the card holding div.
     $('.card-holder').show();
     // Line goes here to add the card to the card holding div.
     $('.card-holder').append(newCard);
+    /* ********************************** */
 }
 
 
 
 
 
-
+/* Main API function.  Pass in lat long and name to call weather API, get the
+    weather code and conditions, create a card, show the location on the map,
+    then call the light change API */
 function getWeather(resortLat, resortLon, resortName) {
     let weatherCode, units;
 
-    let apiKey = WEATHER_KEY; // Open Weather cprybell Project-1 API key
+    // Key is in config.js
+    let apiKey = WEATHER_KEY;
 
     // Check what units to use.
     if ($('#units').prop('checked')) {
@@ -101,10 +108,12 @@ function getWeather(resortLat, resortLon, resortName) {
             console.log('Api has been called.');
             console.log(response.weather[0].id);
 
+            /* ********************************************** */
             /* This is the Google Maps url, it will show whatever location is 
             passed in. We will need to change the selector to display it in the
             proper spot. */
             $('#map').attr('src', `https://www.google.com/maps/embed/v1/view?key=${MAPS_KEY}&center=${resortLat},${resortLon}&zoom=14&maptype=satellite`);
+            /* ********************************************** */
             
             // Get the weather code and convert to string.
             weatherCode = response.weather[0].id;
