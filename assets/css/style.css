@@ -63,7 +63,7 @@ svg {
 @media screen and (max-width: 1130px) {
     .opening-header {
         position: absolute;
-        top: 35%;
+        top: 40%;
         left: 10%;
     }
 }
@@ -72,8 +72,28 @@ svg {
 /* CSS for scrollable menu */
 
 .scrollable-menu {
-    height: 200px;
+    height: 350px;
     overflow-y: scroll;
+}
+
+.card-holder {
+    width: 12rem;
+}
+
+h5 {
+    font-size: 1em;
+}
+
+.card p {
+    font-size: .75em;
+}
+
+.card-text {
+    margin-bottom: 0;
+}
+
+.card-body {
+    padding: 10px;
 }
 
 
