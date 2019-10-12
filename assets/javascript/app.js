@@ -3,6 +3,7 @@
     function. */
 $(document).ready(() => {
     addResorts(skiResorts);
+    $('.main-content').hide();
     /* ************************************************* */
     $('#map').attr('src', `https://www.google.com/maps/embed/v1/view?key=${MAPS_KEY}
     &center=47.608868,-122.335884&zoom=18&maptype=satellite`);
