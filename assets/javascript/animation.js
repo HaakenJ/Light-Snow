@@ -46,12 +46,6 @@ var removeHeader = anime({
     autoplay: false
 })
 
-// Click anywhere on the body of the page to animate the svg.
-$('body').one('click', () => {
-    animateSnowflake.play();
-    removeHeader.play();
-    $('.main-content').show();
-    showPage.play();
-})
+
 
 

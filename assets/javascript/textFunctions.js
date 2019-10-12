@@ -1,6 +1,6 @@
 /* Function to add keys from the passed in object, change '-'s to spaces,
     capitalize the first letters, and add them to the dropdown menu. */
-function addResorts(resortObj) {
+function addResorts(resortObj, classToAdd, idToAddTo) {
     // Loop through keys.
     Object.keys(resortObj).forEach((resort) => {
         let newListItem = $('<li>').addClass('dropdown-item text-white'),
@@ -9,8 +9,9 @@ function addResorts(resortObj) {
         newATag.text(capitalizeFirst(addSpaces(resort)));
         newListItem.append(newATag);
         newListItem.attr('data-name', resort);
+        newListItem.addClass(classToAdd);
         /* ********************************************** */
-        $('#resorts').append(newListItem);
+        $('#' + idToAddTo).append(newListItem);
         /* ********************************************** */
     })
 }

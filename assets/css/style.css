@@ -1,7 +1,6 @@
-
-
-
-
+body {
+    overflow-y: hidden;
+}
 
 #inputs {
     position: relative;
@@ -18,8 +17,7 @@
 
 .display-4,
 .lead,
-h3,
-.dropdown {
+h3 {
     text-align: center;
 }
 
@@ -74,6 +72,11 @@ svg {
 .scrollable-menu {
     height: 350px;
     overflow-y: scroll;
+}
+
+#toggle-switch {
+    position: absolute;
+    right: 10px;
 }
 
 .dropdown-item:hover {
