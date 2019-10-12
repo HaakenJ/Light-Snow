@@ -9,18 +9,24 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
     <!-- Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
-    <!-- Firebase Realtime Database -->
-    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-database.js"></script>
-    <!-- Firebase Auth -->
-    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-auth.js"></script>
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <br><br>
+    <!-- Snowflake SVG and header for opening page -->
     <svg viewBox="0 0 0 0">
         <polygon class="snowflake" points="195.8,117.26 192.8,107 146.42,117.8 111.88,100 146.74,82.04 149.79,82.79 192.35,93.23 
 			195.5,83.01 161.2,74.59 200,54.59 194.06,45.41 155.13,65.47 164.65,34.58 153.19,31.77 140.48,73.02 105.94,90.81 105.94,55.22 
@@ -43,7 +49,11 @@
             <p class="lead">Lets Check The Conditions</p>
         </div>
         <br><br><br>
+<<<<<<< HEAD
         <div class="row">
+=======
+
+>>>>>>> master
         <h3>Click on the Ski Resorts dropdown to see the list of resorts</h3>
         </div>
         <div class="dropdown">
@@ -73,11 +83,37 @@
 
     </div>
 
+    <!-- Firebase Main App -->
+    <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
+    <!-- Firebase Realtime Database -->
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-database.js"></script>
+    <!-- Firebase Auth -->
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-auth.js"></script>
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <!-- Moment.js -->
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <!-- Moment.js timezones -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.26/moment-timezone-with-data.js"></script>
+    <!-- Anime.js -->
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script>
+    <!-- API Keys -->
+    <script src="config.js"></script>
+    <!-- Firebase database functions -->
+    <script src="assets/javascript/database.js"></script>
+    <!-- Animation script -->
+    <script src="assets/javascript/animation.js"></script>
+    <!-- ski resorts object -->
+    <script src="assets/javascript/skiResorts.js"></script>
+    <!-- weatherCodes object -->
+    <script src="assets/javascript/weatherCodes.js"></script>
+    <!-- Light api script -->
+    <script src="assets/javascript/lights.js"></script>
+    <!-- Weather api script -->
+    <script src="assets/javascript/weather.js"></script>
+    <!-- Functions to act on the text of the page. -->
+    <script src="assets/javascript/textFunctions.js"></script>
     <!-- Main app.js -->
     <script src="assets/javascript/app.js"></script>
 </body>
