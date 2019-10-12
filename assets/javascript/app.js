@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* Basic format we can use for resorts, all lowercase and one word so that 
     we can convert any input into lowercase with no spaces.*/
 let resorts = {
@@ -44,7 +43,6 @@ $.ajax({
     // })
     console.log('Number of hours: ' + hourIndex);
     console.log(lastEight)
-=======
 /* When the page is ready, load resorts into dropdown, add a map centered on
     our class, and set a click function for the resorts to call the getWeather
     function. */
@@ -64,5 +62,4 @@ $(document).ready(() => {
 
         getWeather(lat, lon, resortName);
     })
->>>>>>> master
 })
