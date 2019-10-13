@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>LightSnow</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -29,11 +30,12 @@
 
 <body>
 
-    <!-- Snowflake SVG and header for opening page -->
-    <!-- SVG is a different markup language and using the polygon with the 
+    <div class="opening-content">
+        <!-- Snowflake SVG and header for opening page -->
+        <!-- SVG is a different markup language and using the polygon with the 
         points below and css to style the color, you can make a snowflake that can be modified. -->
-    <svg viewBox="0 0 0 0">
-        <polygon class="snowflake" points="195.8,117.26 192.8,107 146.42,117.8 111.88,100 146.74,82.04 149.79,82.79 192.35,93.23 
+        <svg viewBox="0 0 0 0">
+            <polygon class="snowflake" points="195.8,117.26 192.8,107 146.42,117.8 111.88,100 146.74,82.04 149.79,82.79 192.35,93.23 
 			195.5,83.01 161.2,74.59 200,54.59 194.06,45.41 155.13,65.47 164.65,34.58 153.19,31.77 140.48,73.02 105.94,90.81 105.94,55.22 
 			139.61,24.77 131.15,17.32 105.94,40.12 105.94,0 94.06,0 94.06,39.99 68.74,17.68 60.39,25.23 91.8,52.9 94.06,54.89 
 			94.06,90.81 59.52,73.02 46.81,31.77 35.35,34.58 44.87,65.47 5.94,45.41 0,54.59 38.8,74.59 4.5,83.01 7.65,93.23 50.21,82.79 
@@ -43,23 +45,23 @@
             155.26,134.6 194.06,154.59 200,145.41 161.07,125.35" />
 
 
-    </svg>
-    <div class="opening-header">CLICK ANYWHERE TO START
-        <div class="dropdown">
-            <button class="btn btn-dark btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
-                Pick a Resort
-            </button>
-            <ul class="dropdown-menu scrollable-menu bg-dark resorts" id="opening-resorts" role="menu">
-            </ul>
-        </div> 
-    </div>
+        </svg>
+        <div class="opening-header">CLICK ANYWHERE TO START
+            <div class="dropdown">
+                <button class="btn btn-dark btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
+                    Pick a Resort
+                </button>
+                <ul class="dropdown-menu scrollable-menu bg-dark resorts" id="opening-resorts" role="menu">
+                </ul>
+            </div>
+        </div>
+    </div>  
 
 
     <!-- Main content to show after a user clicks the page and snowflake is animated -->
-        <!-- Main content to show after a user clicks the page and snowflake is animated -->
-        <div class="main-content">
-            <img class="background" src="assets/images/background.jpg" alt="Snowy Mountains">
-    
+    <div class="main-content">
+        <img class="background" src="assets/images/background.jpg" alt="Snowy Mountains">
+
 
 
 
@@ -82,85 +84,89 @@
             </li>
         </ul>
 
-            <div class="container">
-                <div class="row">
-                    <div class="col-6">
-                        <iframe id="map" width="100%" height="460" frameborder="0" style="border:0" src="" allowfullscreen>
-                        </iframe>
-                    </div>
-                    <div class="col-2">
-                        <div class="container-hue" style= "background-color:white;">
-                            <div class="card-body">
-                                <div class="card-container">
-                                </div>
-                            </div>
-                        </div>
-                        </br>
-                        <div class="container-white">
-                            <div class="card-body">
-                                <div class="card-container">
-                                    <h5 class="card-title">Local Time</h5>
-                                    <div class="text-container">
-                                        <p class="card-text" id="local-time">22:22</p>
-                                    </div>
-                                </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <iframe id="map" width="100%" height="460" frameborder="0" style="border:0" src="" allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="col-2">
+                    <div class="container-hue">
+                        <div class="card-body">
+                            <div class="card-container" id="color-card">
+                                <img id="icon" class="pt-5" src="" alt="">
                             </div>
                         </div>
                     </div>
-                    <div class="col-2">
-                        <div class="container-white">
-                            <div class="card-body">
-                                <div class="card-container">
-                                    <h5 class="card-title">Description</h5>
-                                    <div class="text-container">
-                                        <p class="card-text" id="description">THUNDERSTORM WITH HEAVY DRIZZLE</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        </br>
-                        <div class="container-white">
-                            <div class="card-body">
-                                <div class="card-container">
-                                    <h5 class="card-title">Temperature</h5>
-                                    <div class="text-container">
-                                        <p class="card-text" id="temperature"><div><span id='degrees'>22</span><span id='symbol'>&#176</span><span id='degree-unit'>F</span></div></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-2">
-                        <div class="container-white">
-                            <div class="card-body">
-                                <div class="card-container">
-                                    <h5 class="card-title">Wind Speed</h5>
-                                    <div class="text-container">
-                                        <p class="card-text" id="wind-speed">88.88 mph</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </br>
-                        <div class="container-white">
-                            <div class="card-body">
-                                <div class="card-container">
-                                    <h5 class="card-title">Wind Direction</h5>
-                                    <div class="text-container">
-                                        <p class="card-text" id="wind-direction">888 Degrees</p>
-                                    </div>
+                    <div class="container-white">
+                        <div class="card-body">
+                            <div class="card-container">
+                                <h5 class="card-title">Local Time</h5>
+                                <div class="text-container">
+                                    <p class="card-text" id="local-time">22:22</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="container-white">
+                        <div class="card-body">
+                            <div class="card-container">
+                                <h5 class="card-title">Description</h5>
+                                <div class="text-container">
+                                    <p class="card-text" id="description">THUNDERSTORM WITH HEAVY DRIZZLE</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </br>
+                    <div class="container-white">
+                        <div class="card-body">
+                            <div class="card-container">
+                                <h5 class="card-title">Temperature</h5>
+                                <div class="text-container">
+                                    <p class="card-text" id="temperature">
+                                        <div><span id='degrees'>22</span><span id='symbol'>&#176</span>
+                                            <span id='degree-unit'>F</span></div>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-2">
+                    <div class="container-white">
+                        <div class="card-body">
+                            <div class="card-container">
+                                <h5 class="card-title">Wind Speed</h5>
+                                <div class="text-container">
+                                    <p class="card-text" id="wind-speed">88.88 mph</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </br>
+                    <div class="container-white">
+                        <div class="card-body">
+                            <div class="card-container">
+                                <h5 class="card-title">Wind Direction</h5>
+                                <div class="text-container">
+                                    <p class="card-text" id="wind-direction">888 Degrees</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
 
-<!-- original card -->
+        <!-- original card -->
 
-            <!-- <div class="container mt-5">
+        <!-- <div class="container mt-5">
                 <div class="row">
                 <div class="col-6">
                     <iframe id="map" width="100%" height="400" frameborder="0" style="border:0" src="" allowfullscreen>
@@ -172,41 +178,42 @@
             </div>
             </div> -->
 
-    <!-- Firebase Main App -->
-    <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
-    <!-- Firebase Realtime Database -->
-    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-database.js"></script>
-    <!-- Firebase Auth -->
-    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-auth.js"></script>
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <!-- Moment.js -->
-    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-    <!-- Moment.js timezones -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.26/moment-timezone-with-data.js"></script>
-    <!-- Anime.js -->
-    <script src="https://cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script>
-    <!-- Toggle Button js -->
-    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.5.0/js/bootstrap4-toggle.min.js"></script>
-    <!-- API Keys -->
-    <script src="config.js"></script>
-    <!-- Firebase database functions -->
-    <script src="assets/javascript/database.js"></script>
-    <!-- Animation script -->
-    <script src="assets/javascript/animation.js"></script>
-    <!-- ski resorts object -->
-    <script src="assets/javascript/skiResorts.js"></script>
-    <!-- weatherCodes object -->
-    <script src="assets/javascript/weatherCodes.js"></script>
-    <!-- Light api script -->
-    <script src="assets/javascript/lights.js"></script>
-    <!-- Weather api script -->
-    <script src="assets/javascript/weather.js"></script>
-    <!-- Functions to act on the text of the page. -->
-    <script src="assets/javascript/textFunctions.js"></script>
-    <!-- Main app.js -->
-    <script src="assets/javascript/app.js"></script>
+        <!-- Firebase Main App -->
+        <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
+        <!-- Firebase Realtime Database -->
+        <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-database.js"></script>
+        <!-- Firebase Auth -->
+        <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-auth.js"></script>
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+        <!-- Moment.js -->
+        <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+        <!-- Moment.js timezones -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.26/moment-timezone-with-data.js">
+        </script>
+        <!-- Anime.js -->
+        <script src="https://cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script>
+        <!-- Toggle Button js -->
+        <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.5.0/js/bootstrap4-toggle.min.js"></script>
+        <!-- API Keys -->
+        <script src="config.js"></script>
+        <!-- Firebase database functions -->
+        <script src="assets/javascript/database.js"></script>
+        <!-- Animation script -->
+        <script src="assets/javascript/animation.js"></script>
+        <!-- ski resorts object -->
+        <script src="assets/javascript/skiResorts.js"></script>
+        <!-- weatherCodes object -->
+        <script src="assets/javascript/weatherCodes.js"></script>
+        <!-- Light api script -->
+        <script src="assets/javascript/lights.js"></script>
+        <!-- Weather api script -->
+        <script src="assets/javascript/weather.js"></script>
+        <!-- Functions to act on the text of the page. -->
+        <script src="assets/javascript/textFunctions.js"></script>
+        <!-- Main app.js -->
+        <script src="assets/javascript/app.js"></script>
 </body>
 
 </html>

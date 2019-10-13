@@ -203,24 +203,28 @@ let skiResorts = {
         'lat': '47.608868',
         'long': '-122.335884',
         'test': true,
-        'code': 212
+        'code': 212,
+        'icon': '11d'
     },
     'extreme-rain': {
         'lat': '47.608868',
         'long': '-122.335884',
         'test': true,
-        'code': 504
+        'code': 504,
+        'icon': '10d'
     },
     'heavy-snow': {
         'lat': '47.608868',
         'long': '-122.335884',
         'test': true,
-        'code': 602
+        'code': 602,
+        'icon': '13d'
     },
     'tornado': {
         'lat': '47.608868',
         'long': '-122.335884',
         'test': true,
-        'code': 781
+        'code': 781,
+        'icon': '50d'
     }
 }
