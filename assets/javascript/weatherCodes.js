@@ -2,6 +2,7 @@ let codes = {
     2: {
         200: {
             'params': {
+                'power': 'on',
                 'color': 'yellow',
                 'brightness': '0.4'
             },
@@ -11,6 +12,7 @@ let codes = {
         },
         201: {
             'params': {
+                'power': 'on',
                 'color': 'yellow',
                 'brisghtness': '0.7'
             },
@@ -20,6 +22,7 @@ let codes = {
         },
         202: {
             'params': {
+                'power': 'on',
                 'color': 'yellow',
                 'brightness': '0.9'
             },
@@ -27,13 +30,16 @@ let codes = {
             'effectParams': {
                 'power_on': true,
                 'color': 'yellow',
-                'period': 1
+                'from_color': 'white',
+                'period': 1,
+                'cycles': 100
             },
             'desc': 'thunderstorm with heavy rain',
 
         },
         210: {
             'params': {
+                'power': 'on',
                 'color': 'yellow',
                 'brightness': '0.5'
             },
@@ -42,6 +48,7 @@ let codes = {
         },
         211: {
             'params': {
+                'power': 'on',
                 'color': 'yellow',
                 'brightness': '0.8'
             },
@@ -50,6 +57,7 @@ let codes = {
         },
         212: {
             'params': {
+                'power': 'on',
                 'color': 'yellow',
                 'brightness': '1.0'
             },
@@ -57,13 +65,16 @@ let codes = {
             'effectParams': {
                 'power_on': true,
                 'color': 'yellow',
-                'period': 1
+                'from_color': 'white',
+                'period': 1,
+                'cycles': 100
             },
             'desc': 'heavy thunderstorm',
 
         },
         221: {
             'params': {
+                'power': 'on',
                 'color': 'yellow',
                 'brightness': '0.6'
             },
@@ -72,6 +83,7 @@ let codes = {
         },
         230: {
             'params': {
+                'power': 'on',
                 'color': 'yellow',
                 'brightness': '0.1'
             },
@@ -80,6 +92,7 @@ let codes = {
         },
         231: {
             'params': {
+                'power': 'on',
                 'color': 'yellow',
                 'brightness': '0.2'
             },
@@ -88,6 +101,7 @@ let codes = {
         },
         232: {
             'params': {
+                'power': 'on',
                 'color': 'yellow',
                 'brightness': '0.3'
             },
@@ -98,6 +112,7 @@ let codes = {
     3: {
         300: {
             'params': {
+                'power': 'on',
                 'color': 'cyan',
                 'brightness': '0.2'
             },
@@ -106,6 +121,7 @@ let codes = {
         },
         301: {
             'params': {
+                'power': 'on',
                 'color': 'cyan',
                 'brightness': '0.4'
             },
@@ -114,6 +130,7 @@ let codes = {
         },
         302: {
             'params': {
+                'power': 'on',
                 'color': 'cyan',
                 'brightness': '0.5'
             },
@@ -122,6 +139,7 @@ let codes = {
         },
         310: {
             'params': {
+                'power': 'on',
                 'color': 'cyan',
                 'brightness': '0.3'
             },
@@ -130,6 +148,7 @@ let codes = {
         },
         311: {
             'params': {
+                'power': 'on',
                 'color': 'cyan',
                 'brightness': '0.6'
             },
@@ -138,6 +157,7 @@ let codes = {
         },
         312: {
             'params': {
+                'power': 'on',
                 'color': 'cyan',
                 'brightness': '0.7'
             },
@@ -146,6 +166,7 @@ let codes = {
         },
         313: {
             'params': {
+                'power': 'on',
                 'color': 'cyan',
                 'brightness': '0.8'
             },
@@ -154,6 +175,7 @@ let codes = {
         },
         314: {
             'params': {
+                'power': 'on',
                 'color': 'cyan',
                 'brightness': '1.0'
             },
@@ -162,40 +184,41 @@ let codes = {
         },
         321: {
             'params': {
+                'power': 'on',
                 'color': 'cyan',
                 'brightness': '0.9'
             },
             'desc': 'shower drizzle',
-
         }
     },
     5: {
         500: {
             'params': {
+                'power': 'on',
                 'color': 'blue',
                 'brightness': '0.5'
             },
             'desc': 'light rain',
-
         },
         501: {
             'params': {
+                'power': 'on',
                 'color': 'blue',
                 'brightness': '0.6'
             },
             'desc': 'moderate rain',
-
         },
         502: {
             'params': {
+                'power': 'on',
                 'color': 'blue',
                 'brightness': '0.7'
             },
             'desc': 'heavy intensity rain',
-
         },
         503: {
             'params': {
+                'power': 'on',
                 'color': 'blue',
                 'brightness': '0.9'
             },
@@ -203,13 +226,15 @@ let codes = {
             'effectParams': {
                 'power_on': true,
                 'color': 'blue',
-                'period': 1
+                'from_color': 'white',
+                'period': 1,
+                'cycles': 100
             },
             'desc': 'very heavy rain',
-
         },
         504: {
             'params': {
+                'power': 'on',
                 'color': 'blue',
                 'brightness': '1.0'
             },
@@ -217,63 +242,65 @@ let codes = {
             'effectParams': {
                 'power_on': true,
                 'color': 'blue',
-                'period': 0.5
+                'from_color': 'white',
+                'period': 0.5,
+                'cycles': 100
             },
             'desc': 'extreme rain',
-
         },
         511: {
             'params': {
+                'power': 'on',
                 'color': 'blue',
                 'brightness': '0.8'
             },
             'desc': 'freezing rain',
-
         },
         520: {
             'params': {
+                'power': 'on',
                 'color': 'blue',
                 'brightness': '0.1'
             },
             'desc': 'light intensity shower rain',
-
         },
         521: {
             'params': {
+                'power': 'on',
                 'color': 'blue',
                 'brightness': '0.2'
             },
             'desc': 'shower rain',
-
         },
         522: {
             'params': {
+                'power': 'on',
                 'color': 'blue',
                 'brightness': '0.3'
             },
             'desc': 'heavy intensity shower rain',
-
         },
         531: {
             'params': {
+                'power': 'on',
                 'color': 'blue',
                 'brightness': '0.4'
             },
             'desc': 'ragged shower rain',
-
         }
     },
     6: {
         600: {
             'params': {
+                'power': 'on',
                 'color': 'green',
                 'brightness': '0.8'
             },
             'desc': 'light snow',
-
         },
         601: {
             'params': {
+                'power': 'on',
                 'color': 'green',
                 'brightness': '0.9'
             },
@@ -281,13 +308,15 @@ let codes = {
             'effectParams': {
                 'power_on': true,
                 'color': 'green',
-                'period': 1
+                'from_color': 'white',
+                'period': 1,
+                'cycles': 100
             },
             'desc': 'snow',
-
         },
         602: {
             'params': {
+                'power': 'on',
                 'color': 'green',
                 'brightness': '1.0'
             },
@@ -295,87 +324,89 @@ let codes = {
             'effectParams': {
                 'power_on': true,
                 'color': 'green',
-                'period': 0.5
+                'from_color': 'white',
+                'period': 0.5,
+                'cycles': 100
             },
             'desc': 'heavy snow',
-
         },
         611: {
             'params': {
+                'power': 'on',
                 'color': 'purple',
                 'brightness': '0.7'
             },
             'desc': 'sleet',
-
         },
         612: {
             'params': {
+                'power': 'on',
                 'color': 'purple',
                 'brightness': '0.6'
             },
             'desc': 'light shower sleet',
-
         },
         613: {
             'params': {
+                'power': 'on',
                 'color': 'purple',
                 'brightness': '0.5'
             },
             'desc': 'shower sleet',
-
         },
         615: {
             'params': {
+                'power': 'on',
                 'color': 'purple',
                 'brightness': '0.4'
             },
             'desc': 'light rain and snow',
-
         },
         616: {
             'params': {
+                'power': 'on',
                 'color': 'purple',
                 'brightness': '0.3'
             },
             'desc': 'rain and snow',
-
         },
         620: {
             'params': {
+                'power': 'on',
                 'color': 'green',
                 'brightness': '0.5'
             },
             'desc': 'light shower snow',
-
         },
         621: {
             'params': {
+                'power': 'on',
                 'color': 'green',
                 'brightness': '0.6'
             },
             'desc': 'shower snow',
-
         },
         622: {
             'params': {
+                'power': 'on',
                 'color': 'green',
                 'brightness': '0.7'
             },
             'desc': 'heavy shower snow',
-
         }
     },
     7: {
         701: {
             'params': {
+                'power': 'on',
                 'color': 'pink',
                 'brightness': '0.2'
             },
             'desc': 'mist',
-
         },
         711: {
             'params': {
+                'power': 'on',
                 'color': 'orange',
                 'brightness': '0.4'
             },
@@ -383,53 +414,55 @@ let codes = {
             'effectParams': {
                 'power_on': true,
                 'color': 'orange',
-                'period': 1
+                'from_color': 'white',
+                'period': 1,
+                'cycles': 100
             },
             'desc': 'smoke',
-
         },
         721: {
             'params': {
+                'power': 'on',
                 'color': 'pink',
                 'brightness': '0.3'
             },
             'desc': 'haze',
-
         },
         731: {
             'params': {
+                'power': 'on',
                 'color': 'orange',
                 'brightness': '0.4'
             },
             'desc': 'sand/ dust whirls',
-
         },
         741: {
             'params': {
+                'power': 'on',
                 'color': 'pink',
                 'brightness': '0.4'
             },
             'desc': 'fog',
-
         },
         751: {
             'params': {
+                'power': 'on',
                 'color': 'orange',
                 'brightness': '0.3'
             },
             'desc': 'sand',
-
         },
         761: {
             'params': {
+                'power': 'on',
                 'color': 'orange',
                 'brightness': '0.7'
             },
             'desc': 'dust',
-
         },
         762: {
             'params': {
+                'power': 'on',
                 'color': 'orange',
                 'brightness': '0.8'
             },
@@ -437,13 +470,15 @@ let codes = {
             'effectParams': {
                 'power_on': true,
                 'color': 'orange',
-                'period': 0.5
+                'from_color': 'white',
+                'period': 0.5,
+                'cycles': 100
             },
             'desc': 'volcanic ash',
-
         },
         771: {
             'params': {
+                'power': 'on',
                 'color': 'orange',
                 'brightness': '0.6'
             },
@@ -451,13 +486,15 @@ let codes = {
             'effectParams': {
                 'power_on': true,
                 'color': 'orange',
-                'period': 0.5
+                'from_color': 'white',
+                'period': 0.5,
+                'cycles': 100
             },
             'desc': 'squalls',
-
         },
         781: {
             'params': {
+                'power': 'on',
                 'color': 'red',
                 'brightness': '1.0'
             },
@@ -465,45 +502,44 @@ let codes = {
             'effectParams': {
                 'power_on': true,
                 'color': 'red',
-                'period': 0.2
+                'from_color': 'white',
+                'period': 0.2,
+                'cycles': 100
             },
             'desc': 'tornado',
-
         }
     },
     8: {
         800: {
             'params': {
+                'power': 'on',
                 'color': 'white',
                 'brightness': '1.0',
                 'kelvin': '2700'
             },
             'desc': 'clear sky',
-
-
         },
         801: {
             'params': {
+                'power': 'on',
                 'color': 'white',
                 'brightness': '0.5',
                 'kelvin': '2700'
             },
             'desc': 'few clouds: 11-25%',
-
-
         },
         802: {
             'params': {
+                'power': 'on',
                 'color': 'white',
                 'brightness': '0.3',
                 'kelvin': '2700'
             },
             'desc': 'scattered clouds: 25-50%',
-
-
         },
         803: {
             'params': {
+                'power': 'on',
                 'color': 'blue',
                 'brightness': '0.4',
             },
@@ -511,6 +547,7 @@ let codes = {
         },
         804: {
             'params': {
+                'power': 'on',
                 'color': 'blue',
                 'brightness': '0.2',
             },
