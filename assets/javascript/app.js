@@ -33,6 +33,8 @@ $(document).ready(() => {
             lat = skiResorts[resortName].lat,
             lon = skiResorts[resortName].long;
 
+        $('#page-header').text(capitalizeFirst(addSpaces(resortName)));;
+
         /* Call the getWeather (which will also change the light) function
             with the clicked item's lat, long, and name. */
         getWeather(lat, lon, resortName);
@@ -46,5 +48,6 @@ $(document).ready(() => {
         $('.main-content').show();
         $('.opening-resorts').hide();
         showPage.play();
+        setTimeout(() => {$('.opening-content').hide();}, 2000);    
     })
 })

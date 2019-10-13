@@ -3,6 +3,11 @@ function addSpaces(str) {
     let newStr = str.replace('-', ' ');
     return newStr;
 }
+
+
+
+
+
 // Capitalize the first letter in words.
 function capitalizeFirst(str) {
     // Split the string by spaces.
@@ -15,6 +20,10 @@ function capitalizeFirst(str) {
     // Rejoin the array into a string with spaces.
     return newArr.join(' ');
 }
+
+
+
+
 
 /* Function to add keys from the passed in object, change '-'s to spaces,
     capitalize the first letters, and add them to the dropdown menu. */
