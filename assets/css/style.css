@@ -2,6 +2,10 @@ body {
     overflow-y: hidden;
 }
 
+.card-holder {
+    margin: 0 auto;
+}
+
 #inputs {
     position: relative;
     top: 300px;
