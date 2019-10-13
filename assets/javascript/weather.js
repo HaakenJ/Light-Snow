@@ -23,16 +23,21 @@ function getCondObj(response) {
 }
 
 
-/* Create a card displaying the current weather conditions passed in.*/
+/* Update the cards displaying the current weather conditions passed in.*/
 function updateCards(iconId, condObj, bgColor, timezone) {
     $('#description').text(capitalizeFirst(condObj['Description']));
     $('#wind-speed').text(condObj['Wind Speed']);
     $('#local-time').text(moment().tz(timezone).format('HH:mm'));
     $('#degrees').text(Math.floor(condObj['Temperature']));
     $('#degree-unit').text(condObj['Temp-unit']);
-    $('#wind-direction').text(condObj['Wind Direction']);
+    
     $('.container-hue').css('background-color', bgColor);
     $('#icon').attr('src', `http://openweathermap.org/img/wn/${iconId}@2x.png`);
+    if (condObj['Wind Direction'] === 'undefined degrees') {
+        $('#wind-direction').text('Not provided');
+    } else {
+        $('#wind-direction').text(condObj['Wind Direction']);
+    }
 }
 
 
