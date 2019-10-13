@@ -30,6 +30,8 @@
 <body>
 
     <!-- Snowflake SVG and header for opening page -->
+    <!-- SVG is a different markup language and using the polygon with the 
+        points below and css to style the color, you can make a snowflake that can be modified. -->
     <svg viewBox="0 0 0 0">
         <polygon class="snowflake" points="195.8,117.26 192.8,107 146.42,117.8 111.88,100 146.74,82.04 149.79,82.79 192.35,93.23 
 			195.5,83.01 161.2,74.59 200,54.59 194.06,45.41 155.13,65.47 164.65,34.58 153.19,31.77 140.48,73.02 105.94,90.81 105.94,55.22 
@@ -40,42 +42,45 @@
 			105.94,159.88 131.15,182.68 139.61,175.23 105.94,144.78 105.94,109.19 140.8,127.15 141.6,129.88 152.74,168 164.24,165.32 
             155.26,134.6 194.06,154.59 200,145.41 161.07,125.35" />
 
-        </svg>
-        <div class="opening-header">CLICK ANYWHERE TO START
-            <div class="dropdown">
-                <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
-                    Pick a Resort
-                </button>
-                <ul class="dropdown-menu scrollable-menu bg-secondary resorts" id="opening-resorts" role="menu">
-                </ul>
-            </div>
-        </div>
+
+    </svg>
+    <div class="opening-header">CLICK ANYWHERE TO START
+        <div class="dropdown">
+            <button class="btn btn-dark btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
+                Pick a Resort
+            </button>
+            <ul class="dropdown-menu scrollable-menu bg-dark resorts" id="opening-resorts" role="menu">
+            </ul>
+        </div> 
+    </div>
+
 
     <!-- Main content to show after a user clicks the page and snowflake is animated -->
         <!-- Main content to show after a user clicks the page and snowflake is animated -->
         <div class="main-content">
             <img class="background" src="assets/images/background.jpg" alt="Snowy Mountains">
     
-            <ul class="nav bg-dark fixed-top">
-                <li class="nav-item p-2">
-                    <h1 class="text-light" id="page-header">LIGHT SNOW</h1>
-                </li>
-                <li class="nav-item p-2">
-                    <div class="dropdown">
-                        <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
-                            Pick a Resort
-                        </button>
-                        <ul class="dropdown-menu scrollable-menu bg-secondary resorts" id="nav-resorts" role="menu">
-                        </ul>
-                    </div>
-                </li>
-                <li class="nav-item pt-3" id="toggle-switch">
-                    <input id="units" type="checkbox" checked data-toggle="toggle" data-onstyle="secondary" data-on="F&#176"
-                        data-off="C&#176">
-                </li>
-            </ul>
-            <br><br>
 
+
+
+        <ul class="nav bg-dark fixed-top">
+            <li class="nav-item p-2">
+                <h1 class="text-light" id="page-header">LIGHT SNOW</h1>
+            </li>
+            <li class="nav-item p-2">
+                <div class="dropdown">
+                    <button class="btn btn-dark btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
+                        Pick a Resort
+                    </button>
+                    <ul class="dropdown-menu scrollable-menu bg-dark resorts" id="nav-resorts" role="menu">
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item pt-3" id="toggle-switch">
+                <input id="units" type="checkbox" checked data-toggle="toggle" data-onstyle="secondary" data-on="F&#176"
+                    data-off="C&#176">
+            </li>
+        </ul>
 
             <div class="container">
                 <div class="row">

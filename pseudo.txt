@@ -120,5 +120,5 @@ When a user clicks the unfavorite icon next to a favorited resort.
 
 ******STILL TO DO******
 
-Add dropdown to index
-add divs for cards, map, toggle switch
+Need to make pulse not change color.
+- Need to update cards for test cases
