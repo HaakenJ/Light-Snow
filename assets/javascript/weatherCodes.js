@@ -555,3 +555,11 @@ let codes = {
         }
     }
 };
+
+let testCondObj = {
+    'Description': "Test",
+    'Temperature': '0',
+    'Temp-unit': "",
+    'Wind Speed': "",
+    'Wind Direction': ""
+}

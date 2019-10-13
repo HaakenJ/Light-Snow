@@ -7,64 +7,32 @@ function getCondObj(response) {
     condObj['Description'] = response.weather[0].description;
     // Check what units to use by checking the checkbox's 'checked' property.
     if ($('#units').prop('checked')) {
-        condObj['Temperature'] = (response.main.temp + ' F');
+        condObj['Temperature'] = (response.main.temp);
+        condObj['Temp-unit'] = 'F';
         condObj['Wind Speed'] = (response.wind.speed + ' mph');
     } else {
-        condObj['Temperature'] = (response.main.temp + ' C');
+        condObj['Temperature'] = (response.main.temp);
+        condObj['Temp-unit'] = 'C';
         condObj['Wind Speed'] = (response.wind.speed + ' kph');
     }
-    condObj['Humidity'] = (response.main.humidity + '%');
     condObj['Wind Direction'] = (response.wind.deg + ' degrees');
+
+    console.log(condObj);
 
     return condObj;
 }
 
 
 /* Create a card displaying the current weather conditions passed in.*/
-function createCard(iconId, condObj, bgColor, timezone) {
-    let newCard = $('<div>').addClass('card text-center'),
-        image = $('<img>').addClass('card-img-top'),
-        newBody = $('<div>').addClass('card-body'),
-        timeHeader = $('<h5>').addClass('card-title'),
-        time = $('<p>').addClass('card-text');
-
-    newCard.css('width', '10rem;');
-
-    image.attr('src', `http://openweathermap.org/img/wn/${iconId}@2x.png`);
-    image.attr('alt', condObj['Description']);
-    image.css('background-color', bgColor);
-
-    timeHeader.text('Local Time');
-    time.text(moment().tz(timezone).format('HH:mm'));
-
-    newCard.append(image);
-    newCard.append(timeHeader);
-    newCard.append(time);
-
-    for (var condition in condObj) {
-        let newCond = $('<div>').addClass('card-text'),
-            header = $('<h5>').addClass('card-title'),
-            content = $('<p>').addClass('card-text');
-
-        header.text(condition);
-        content.text(condObj[condition]);
-
-        newCond.append(header);
-        newCond.append(content);
-
-        newBody.append(newCond);
-    }
-    newCard.append(newBody);
-
-    // Code to change for index.html
-    /* ********************************** */
-    // Line goes here to delete whatever is currently in the card holding div.
-    $('.card-holder').empty();
-    // Line goes here to show the card holding div.
-    $('.card-holder').show();
-    // Line goes here to add the card to the card holding div.
-    $('.card-holder').append(newCard);
-    /* ********************************** */
+function updateCards(iconId, condObj, bgColor, timezone) {
+    $('#description').text(capitalizeFirst(condObj['Description']));
+    $('#wind-speed').text(condObj['Wind Speed']);
+    $('#local-time').text(moment().tz(timezone).format('HH:mm'));
+    $('#degrees').text(Math.floor(condObj['Temperature']));
+    $('#degree-unit').text(condObj['Temp-unit']);
+    $('#wind-direction').text(condObj['Wind Direction']);
+    $('.container-hue').css('background-color', bgColor);
+    $('#icon').attr('src', `http://openweathermap.org/img/wn/${iconId}@2x.png`);
 }
 
 
@@ -95,6 +63,7 @@ function getWeather(resortLat, resortLon, resortName) {
             light API. */
         weatherCode = skiResorts[resortName].code;
         weatherCode = weatherCode.toString();
+        updateCards(skiResorts[resortName].icon, testCondObj, '#FFFFFF', 'America/Los_Angeles');
         $('#map').attr('src', `https://www.google.com/maps/embed/v1/view?key=${MAPS_KEY}&center=${resortLat},${resortLon}&zoom=14&maptype=satellite`);
         changeLights(weatherCode);
     } else {
@@ -121,8 +90,10 @@ function getWeather(resortLat, resortLon, resortName) {
                 bgColor = codes[weatherCode[0]][weatherCode].params.color,
                 timezone = skiResorts[resortName].tz;
 
+            console.log(iconId);
+
             // Create and display the card showing weather conditions.
-            createCard(iconId, getCondObj(response), bgColor, timezone);
+            updateCards(iconId, getCondObj(response), bgColor, timezone);
 
             // Change the color and effect of the light.
             changeLights(weatherCode);

@@ -48,5 +48,6 @@ $(document).ready(() => {
         $('.main-content').show();
         $('.opening-resorts').hide();
         showPage.play();
+        setTimeout(() => {$('.opening-content').hide();}, 2000);    
     })
 })
