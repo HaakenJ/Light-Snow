@@ -150,8 +150,8 @@ let skiResorts = {
         'tz': 'America/New_York'
     },
     'alpine-valley': {
-        'lat': '41.7261',
-        'long': '-81.4280',
+        'lat': '41.526884', 
+        'long': '-81.259735',
         'tz': 'America/New_York'
     },
     'boston-mills': {
