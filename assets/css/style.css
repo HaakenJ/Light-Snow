@@ -1,12 +1,3 @@
-.card-holder {
-    margin: 0 auto;
-}
-
-#inputs {
-    position: relative;
-    top: 300px;
-}
-
 .background {
     opacity: .5;
     position: fixed;
@@ -16,41 +7,25 @@
     z-index: -1;
 }
 
-.display-4,
-.lead,
-h3 {
-    text-align: center;
+.container {
+    margin-top: 120px;
 }
 
-.display-4 {
-    font-weight: bold;
-}
-
-.lead {
-    font-weight: bold;
-}
-
-
-
-/* ************** */
-/* CSS added for animations */
-
-body {
-    overflow-x: hidden;
-}
-
-
+/* Opening page animation */
 .main-content {
     opacity: 0;
 }
+
 svg {
     position: absolute;
     top: 10%;
     left: 10%;
 }
+
 .snowflake {
     fill: #29ABE2;
 }
+
 .opening-header {
     position: absolute;
     top: 15%;
@@ -59,6 +34,7 @@ svg {
     color: #29ABE2;
     font-family: 'Monoton', cursive;
 }
+
 @media screen and (max-width: 1130px) {
     .opening-header {
         position: absolute;
@@ -67,8 +43,8 @@ svg {
     }
 }
 
-/* ************** */
-/* CSS for scrollable menu */
+
+/* Dropdown menu */
 
 .scrollable-menu {
     height: 350px;
@@ -84,20 +60,10 @@ svg {
     background-color: black;
 }
 
-.card-holder {
-    width: 12rem;
-}
 
-h5 {
-    font-size: 1em;
-}
-
-.card p {
-    font-size: .75em;
-}
-
-.card-text {
-    margin-bottom: 0;
+/* Cards */
+.card-container {
+    height: 200px;
 }
 
 .card-body {
@@ -105,192 +71,77 @@ h5 {
     text-align: center;
 }
 
-#units {
-    float: right;
-}
-
-.container-hue {
+.container-hue,
+.container-white {
     border-radius: 10px;
 }
 
 .container-white {
     background-color: white;
-    border-radius: 10px;
 }
 
-.container {
-    margin-top: 120px;
-}
-
-.card-container {
-    width: 100%;
-    height: 200px;
-}
-
-.card-title {
-    font-size: 20px;
-}
-
-#local-time {
-    margin-top: 50px;
-    font-size: 30px;
-}
-#description {
-    margin-top: 50px;
-    font-size: 30px;
-}
-#temperature {
-    margin-top: 50px;
-    font-size: 30px;
-}
-#wind-speed {
-    margin-top: 50px;
-    font-size:30px;
-}
+#local-time,
+#description,
+#degree-card,
+#wind-speed,
 #wind-direction {
-    margin-top: 30px;
-    font-size: 30px;
-}
-#degrees {
-    font-size: 30px;
-}
-#symbol {
-    font-size: 30px;
-}
-#degree-unit {
+    margin-top: 50px;
     font-size: 30px;
 }
 
 
+/* Mobile Sizing */
+@media only screen and (max-width: 767px) {
 
-@media only screen and (min-width: 640px) {
-    /* For mobile: */
-    .col-sm-1 {width: 8.33%;}
-    .col-sm-2 {width: 16.66%;}
-    .col-sm-3 {width: 25%;}
-    .col-sm-4 {width: 33.33%;}
-    .col-sm-5 {width: 41.66%;}
-    .col-sm-6 {width: 50%;}
-    .col-sm-7 {width: 58.33%;}
-    .col-sm-8 {width: 66.66%;}
-    .col-sm-9 {width: 75%;}
-    .col-sm-10 {width: 83.33%;}
-    .col-sm-11 {width: 91.66%;}
-    .col-sm-12 {width: 100%;}
-  }
-  @media only screen and (max-width: 767.99px) {
-    /* mobile only  */
-    .container-hue {
+    .container-hue,
+    .container-white,
+    #map {
         margin-bottom: 10px;
     }
-    .container-white{
-        margin-bottom: 10px;
-    }
-    #map{
-        margin-bottom: 10px;
-    }
-    .card-container {
-        width: 100%;
-        height: 200px;
-    }
-    
-    .card-title {
+
+    .card-title,
+    #local-time,
+    #description,
+    #wind-speed,
+    #wind-direction,
+    #degree-card {
         font-size: 50px;
     }
-    
-    #local-time {
-        margin-top: 20px;
-        font-size: 50px;
-    }
-    #description {
-        margin-top: 20px;
-        font-size: 50px;
-    }
-    #temperature {
-        margin-top: 20px;
-        font-size: 50px;
-    }
-    #wind-speed {
-        margin-top: 20px;
-        font-size: 50px;
-    }
+
+    #local-time,
+    #description,
+    #degree-card,
+    #wind-speed,
     #wind-direction {
         margin-top: 20px;
-        font-size: 50px;
     }
-    #degrees {
-        font-size: 20px;
-    }
-    #symbol {
-        font-size: 20px;
-    }
-    #degree-unit {
-        font-size: 20px;
-    }
-  }
-  @media only screen and (min-width: 768px) {
-    /* For tablet: */
-    .col-md-1 {width: 8.33%;}
-    .col-md-2 {width: 16.66%;}
-    .col-md-3 {width: 25%;}
-    .col-md-4 {width: 33.33%;}
-    .col-md-5 {width: 41.66%;}
-    .col-md-6 {width: 50%;}
-    .col-md-7 {width: 58.33%;}
-    .col-md-8 {width: 66.66%;}
-    .col-md-9 {width: 75%;}
-    .col-md-10 {width: 83.33%;}
-    .col-md-11 {width: 91.66%;}
-    .col-md-12 {width: 100%;}
-    .map {
-        margin-bottom: 20px;
-    }
+}
+
+
+/* Tablet Sizing */
+@media only screen and (max-width: 991px) {
+
+    /* For tablet */
+    .map,
     .row {
         margin-bottom: 20px;
     }
-  }
-
-
-
-  @media only screen and (max-width: 979.99px) and (min-width: 768px) {
-    /* for tablet, desktop only  */
-  #wind-direction {
-        margin-top: 50px;
-  }
-  
 }
-  
-  
-  @media only screen and (min-width: 980px) {
-    /* For desktop: */
-    .col-lg-1 {width: 8.33%;}
-    .col-lg-2 {width: 16.66%;}
-    .col-lg-3 {width: 25%;}
-    .col-lg-4 {width: 33.33%;}
-    .col-lg-5 {width: 41.66%;}
-    .col-lg-6 {width: 48.9%;}
-    .col-lg-7 {width: 58.33%;}
-    .col-lg-8 {width: 66.66%;}
-    .col-lg-9 {width: 75%;}
-    .col-lg-10 {width: 83.33%;}
-    .col-lg-11 {width: 91.66%;}
-    .col-lg-12 {width: 100%;}
-  }
 
-@media only screen and (min-width: 980px) {
+@media only screen and (min-width: 992px) {
     /* for tablet, desktop only  */
-  
+
     body {
         overflow-y: hidden;
     }
-    .map {
-        margin-top: 0px;
-        margin-bottom: 0px;
+
+    .row {
+        margin-bottom: 20px;
     }
 
     #description {
         margin-top: 60px;
         font-size: 20px;
     }
-  
+
 }

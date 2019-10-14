@@ -15,7 +15,7 @@ function getCondObj(response) {
         condObj['Temp-unit'] = 'C';
         condObj['Wind Speed'] = (response.wind.speed + ' kph');
     }
-    condObj['Wind Direction'] = (response.wind.deg + ' degrees');
+    condObj['Wind Direction'] = (response.wind.deg + ' Degrees');
 
     console.log(condObj);
 

@@ -118,7 +118,14 @@ When a user clicks the unfavorite icon next to a favorited resort.
     - Call function to delete that resort from database
     - Call function to populate the dropdown
 
-******STILL TO DO******
 
-Need to make pulse not change color.
-- Need to update cards for test cases
+
+
+
+
+
+******BUGS******
+
+    - A PUT call to set a state color of the light does not override an effect  
+        that was made with a POST call.
+    - Need to get the .replce '-' with ' ' function to replace all '-'s
