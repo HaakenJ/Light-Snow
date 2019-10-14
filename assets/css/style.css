@@ -7,6 +7,10 @@
     z-index: -1;
 }
 
+.body {
+    overflow-x: hidden;
+}
+
 .container {
     margin-top: 120px;
 }
@@ -92,6 +96,10 @@ svg {
 
 /* Mobile Sizing */
 @media only screen and (max-width: 767px) {
+
+    svg {
+        display: none;
+    }
 
     .row {
         margin-bottom: 0;
