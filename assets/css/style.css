@@ -93,6 +93,10 @@ svg {
 /* Mobile Sizing */
 @media only screen and (max-width: 767px) {
 
+    .row {
+        margin-bottom: 0;
+    }
+
     .container-hue,
     .container-white,
     #map {
@@ -119,7 +123,7 @@ svg {
 
 
 /* Tablet Sizing */
-@media only screen and (max-width: 991px) {
+@media only screen and (min-width: 768px) {
 
     /* For tablet */
     .map,
@@ -142,6 +146,10 @@ svg {
     #description {
         margin-top: 60px;
         font-size: 20px;
+    }
+
+    #wind-direction {
+        margin-top: 25px;
     }
 
 }
