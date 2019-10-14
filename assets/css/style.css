@@ -7,7 +7,7 @@
     z-index: -1;
 }
 
-.body {
+body {
     overflow-x: hidden;
 }
 
@@ -93,6 +93,18 @@ svg {
     font-size: 30px;
 }
 
+@media only screen and (max-width: 615px) {
+    #page-header {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 730px) {
+    #page-header {
+        font-size: 30px;
+    }
+}
+
 
 /* Mobile Sizing */
 @media only screen and (max-width: 767px) {
@@ -154,6 +166,7 @@ svg {
     #description {
         margin-top: 60px;
         font-size: 20px;
+        font-weight: 500;
     }
 
     #wind-direction {
