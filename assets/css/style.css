@@ -1,52 +1,36 @@
-#inputs {
-    position: relative;
-    top: 300px;
-}
 
 .background {
     opacity: .5;
     position: fixed;
+    top: 0;
     height: 100%;
     width: 100%;
     z-index: -1;
 }
 
-.display-4,
-.lead,
-h3,
-.dropdown {
-    text-align: center;
-}
-
-.display-4 {
-    font-weight: bold;
-}
-
-.lead {
-    font-weight: bold;
-}
-
-
-
-/* ************** */
-/* CSS added for animations */
-
 body {
     overflow-x: hidden;
 }
 
+.container {
+    margin-top: 120px;
+}
 
+/* Opening page animation */
 .main-content {
     opacity: 0;
 }
+
 svg {
     position: absolute;
     top: 10%;
     left: 10%;
 }
+
 .snowflake {
     fill: #29ABE2;
 }
+
 .opening-header {
     position: absolute;
     top: 15%;
@@ -55,20 +39,130 @@ svg {
     color: #29ABE2;
     font-family: 'Monoton', cursive;
 }
+
 @media screen and (max-width: 1130px) {
     .opening-header {
         position: absolute;
-        top: 35%;
+        top: 40%;
         left: 10%;
     }
 }
 
-/* ************** */
-/* CSS for scrollable menu */
+
+/* Dropdown menu */
 
 .scrollable-menu {
-    height: 200px;
+    height: 350px;
     overflow-y: scroll;
 }
 
+#toggle-switch {
+    position: absolute;
+    right: 10px;
+}
 
+.dropdown-item:hover {
+    background-color: black;
+}
+
+
+/* Cards */
+.card-container {
+    height: 200px;
+}
+
+.card-body {
+    padding: 10px;
+    text-align: center;
+}
+
+.container-hue,
+.container-white {
+    border-radius: 10px;
+}
+
+.container-white {
+    background-color: white;
+}
+
+#local-time,
+#description,
+#degree-card,
+#wind-speed,
+#wind-direction {
+    margin-top: 50px;
+    font-size: 30px;
+}
+
+/* Mobile Sizing */
+@media only screen and (max-width: 767px) {
+
+    svg {
+        display: none;
+    }
+
+    .row {
+        margin-bottom: 0;
+    }
+
+    .add-resort {
+        display: none;
+    }
+
+    .container-hue,
+    .container-white,
+    #map {
+        margin-bottom: 10px;
+    }
+
+    .card-title,
+    #local-time,
+    #description,
+    #wind-speed,
+    #wind-direction,
+    #degree-card {
+        font-size: 45px;
+    }
+
+    #local-time,
+    #description,
+    #degree-card,
+    #wind-speed,
+    #wind-direction {
+        margin-top: 20px;
+    }
+}
+
+
+/* Tablet Sizing */
+@media only screen and (min-width: 768px) {
+
+    /* For tablet */
+    .map,
+    .row {
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    /* for tablet, desktop only  */
+
+    body {
+        overflow-y: hidden;
+    }
+
+    .row {
+        margin-bottom: 20px;
+    }
+
+    #description {
+        margin-top: 60px;
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    #wind-direction {
+        margin-top: 25px;
+    }
+
+}
