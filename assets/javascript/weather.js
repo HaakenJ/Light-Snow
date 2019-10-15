@@ -33,7 +33,7 @@ function updateCards(iconId, condObj, bgColor, timezone) {
     
     $('.container-hue').css('background-color', bgColor);
     $('#icon').attr('src', `http://openweathermap.org/img/wn/${iconId}@2x.png`);
-    if (condObj['Wind Direction'] === 'undefined degrees') {
+    if (condObj['Wind Direction'] === 'undefined Degrees') {
         $('#wind-direction').text('Not provided');
     } else {
         $('#wind-direction').text(condObj['Wind Direction']);

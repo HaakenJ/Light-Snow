@@ -1,6 +1,6 @@
 // Replace '-'s with spaces.
 function addSpaces(str) {
-    let newStr = str.replace('-', ' ');
+    let newStr = str.replace(/-/g, ' ');
     return newStr;
 }
 
