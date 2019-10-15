@@ -129,7 +129,7 @@ svg {
     #wind-speed,
     #wind-direction,
     #degree-card {
-        font-size: 50px;
+        font-size: 45px;
     }
 
     #local-time,
@@ -165,7 +165,7 @@ svg {
 
     #description {
         margin-top: 60px;
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 500;
     }
 
