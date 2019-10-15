@@ -104,11 +104,6 @@ let skiResorts = {
         'long': '-72.9204',
         'tz': 'America/New_York'
     },
-    'attitash-mountain-resort': {
-        'lat': '44.0828',
-        'long': '-71.2294',
-        'tz': 'America/New_York'
-    },
     'wildcat-mountain': {
         'lat': '44.2590',
         'long': '-71.2015',
@@ -194,7 +189,7 @@ let skiResorts = {
         'long': '-121.4114',
         'tz': 'America/New_York'
     },
-    'mount-hood-meadows': {
+    'meadows': {
         'lat': '45.3318',
         'long': '-121.6652',
         'tz': 'America/Los_Angeles'
