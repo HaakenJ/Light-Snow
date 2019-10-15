@@ -48,6 +48,28 @@ $(document).ready(() => {
         $('.main-content').show();
         $('.opening-resorts').hide();
         showPage.play();
-        setTimeout(() => {$('.opening-content').hide();}, 2000);    
+        setTimeout(() => {
+            $('.opening-content').hide();
+        }, 2000);
+    })
+
+    // Add a resort to dropdown only if it is letters, spaces, or hyphens.
+    $('#add-resort-submit').on('click', (event) => {
+        event.preventDefault();
+
+        let newLi = $('<li>').addClass('dropdown-item text-light nav-item'),
+            newATag = $('<a>'),
+            newResort = capitalizeFirst($('#add-resort-input').val());
+
+        if (stringValidation(newResort)) {
+            newLi.attr('data-name', newResort);
+            newATag.text(newResort);
+            newLi.append(newATag);
+            $('.dropdown-menu').prepend(newLi);
+            $('#add-resort-input').val('');
+        } else {
+            $('#add-resort-input').val('');
+        }
+
     })
 })

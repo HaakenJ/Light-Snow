@@ -49,3 +49,7 @@ function addResorts(resortObj, classToAdd, idToAddTo) {
     })
 }
 
+function stringValidation(str) {
+    let alpha = /^[A-Z -]+$/i;
+    return alpha.test(str) && str.length < 30;
+}
