@@ -1,3 +1,5 @@
+/* This file contains code to use in the future.  Not currently implemented. */
+
 var firebaseConfig = {
     // Key in config.js which is not uploaded to github so we can protect keys.
     apiKey: FIREBASE_KEY,

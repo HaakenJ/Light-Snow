@@ -89,10 +89,11 @@ function getWeather(resortLat, resortLon, resortName) {
                 index it to get the first character to use in weatherCodes. */
             weatherCode = response.weather[0].id;
             weatherCode = weatherCode.toString();
+            console.log(weatherCode);
             /* Get the icon and light color to use as background for card,
             and timezone. */
             let iconId = response.weather[0].icon,
-                bgColor = codes[weatherCode[0]][weatherCode].params.color,
+                bgColor = codes[weatherCode].params.color,
                 timezone = skiResorts[resortName].tz;
 
             console.log(iconId);
