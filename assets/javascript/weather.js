@@ -41,7 +41,7 @@ function updateCards(iconId, condObj, bgColor, timezone) {
 /* Main API function.  Pass in lat long and name to call weather API, get the
     weather code and conditions, create a card, show the location on the map,
     then call the light change API */
-function getWeather(resortLat, resortLon, resortName) {
+function getWeather(resortLat, resortLon, resortName, resortObj) {
     let weatherCode, units,
         apiKey = WEATHER_KEY;
 
@@ -53,11 +53,11 @@ function getWeather(resortLat, resortLon, resortName) {
 
     let weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${resortLat}&lon=${resortLon}&APPID=${apiKey}&units=${units}`;
 
-    if (skiResorts[resortName].test) {
+    if (resortObj[resortName].test) {
 
-        weatherCode = skiResorts[resortName].code;
+        weatherCode = resortObj[resortName].code;
         weatherCode = weatherCode.toString();
-        updateCards(skiResorts[resortName].icon, testCondObj, '#FFFFFF', 'America/Los_Angeles');
+        updateCards(resortObj[resortName].icon, testCondObj, '#FFFFFF', 'America/Los_Angeles');
         $('#map').attr('src', `https://www.google.com/maps/embed/v1/view?key=${MAPS_KEY}&center=${resortLat},${resortLon}&zoom=14&maptype=satellite`);
         changeLights(weatherCode);
 
@@ -76,7 +76,7 @@ function getWeather(resortLat, resortLon, resortName) {
 
             let iconId = response.weather[0].icon,
                 bgColor = codes[weatherCode].params.color,
-                timezone = skiResorts[resortName].tz;
+                timezone = resortObj[resortName].tz;
 
             // Create and display the card showing weather conditions.
             updateCards(iconId, getCondObj(response), bgColor, timezone);
