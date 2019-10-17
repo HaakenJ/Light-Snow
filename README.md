@@ -22,13 +22,13 @@ We used several API's and different technologies for functionallity, such as:<p>
 <li>Temperature</li>
 <li>Wind Speed</li>
 <li>Wind Direction</li>
-<p>There is also a map that will show the location of the resort that is selected.</p>
+<li>There is also a map that will show the location of the resort that is selected.</li>
 <br>
 <p>If a user would like to add a resort they click the 'Add a resort button' then:</p>
 <li>A modal shows up with inputs for a name and address.</li>
 <li>The user inputs the name and address and submits.</li>
 <li>The new resort data is added to their local storage so each time they visit the page
-their dropdown list will include their new resort.</li>
+    their dropdown list will include their new resort.</li>
 
 
 
