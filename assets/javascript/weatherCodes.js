@@ -5,7 +5,7 @@ let codes = {
             'color': 'yellow',
             'brightness': '0.4'
         },
-        'desc': 'thunderstorm with light rain',
+        'desc': 'thunderstorm with light rain'
 
 
     },
@@ -15,7 +15,7 @@ let codes = {
             'color': 'yellow',
             'brisghtness': '0.7'
         },
-        'desc': 'thunderstorm with rain',
+        'desc': 'thunderstorm with rain'
 
 
     },
@@ -33,8 +33,7 @@ let codes = {
             'period': 1,
             'cycles': 100
         },
-        'desc': 'thunderstorm with heavy rain',
-
+        'desc': 'thunderstorm with heavy rain'
     },
     210: {
         'params': {
@@ -42,8 +41,7 @@ let codes = {
             'color': 'yellow',
             'brightness': '0.5'
         },
-        'desc': 'light thunderstorm',
-
+        'desc': 'light thunderstorm'
     },
     211: {
         'params': {
@@ -51,8 +49,7 @@ let codes = {
             'color': 'yellow',
             'brightness': '0.8'
         },
-        'desc': 'thunderstorm',
-
+        'desc': 'thunderstorm'
     },
     212: {
         'params': {
@@ -68,8 +65,7 @@ let codes = {
             'period': 1,
             'cycles': 100
         },
-        'desc': 'heavy thunderstorm',
-
+        'desc': 'heavy thunderstorm'
     },
     221: {
         'params': {
@@ -77,8 +73,7 @@ let codes = {
             'color': 'yellow',
             'brightness': '0.6'
         },
-        'desc': 'ragged thunderstorm',
-
+        'desc': 'ragged thunderstorm'
     },
     230: {
         'params': {
@@ -86,8 +81,7 @@ let codes = {
             'color': 'yellow',
             'brightness': '0.1'
         },
-        'desc': 'thunderstorm with light drizzle',
-
+        'desc': 'thunderstorm with light drizzle'
     },
     231: {
         'params': {
@@ -95,8 +89,7 @@ let codes = {
             'color': 'yellow',
             'brightness': '0.2'
         },
-        'desc': 'thunderstorm with drizzle',
-
+        'desc': 'thunderstorm with drizzle'
     },
     232: {
         'params': {
@@ -104,8 +97,7 @@ let codes = {
             'color': 'yellow',
             'brightness': '0.3'
         },
-        'desc': 'thunderstorm with heavy drizzle',
-
+        'desc': 'thunderstorm with heavy drizzle'
     },
     300: {
         'params': {
@@ -113,8 +105,7 @@ let codes = {
             'color': 'cyan',
             'brightness': '0.2'
         },
-        'desc': 'light intensity drizzle',
-
+        'desc': 'light intensity drizzle'
     },
     301: {
         'params': {
@@ -122,8 +113,7 @@ let codes = {
             'color': 'cyan',
             'brightness': '0.4'
         },
-        'desc': 'drizzle',
-
+        'desc': 'drizzle'
     },
     302: {
         'params': {
@@ -131,8 +121,7 @@ let codes = {
             'color': 'cyan',
             'brightness': '0.5'
         },
-        'desc': 'heavy intensity drizzle',
-
+        'desc': 'heavy intensity drizzle'
     },
     310: {
         'params': {
@@ -140,8 +129,7 @@ let codes = {
             'color': 'cyan',
             'brightness': '0.3'
         },
-        'desc': 'light intensity drizzle rain',
-
+        'desc': 'light intensity drizzle rain'
     },
     311: {
         'params': {
@@ -149,8 +137,7 @@ let codes = {
             'color': 'cyan',
             'brightness': '0.6'
         },
-        'desc': 'drizzle rain',
-
+        'desc': 'drizzle rain'
     },
     312: {
         'params': {
@@ -158,8 +145,7 @@ let codes = {
             'color': 'cyan',
             'brightness': '0.7'
         },
-        'desc': 'heavy intensity drizzle rain',
-
+        'desc': 'heavy intensity drizzle rain'
     },
     313: {
         'params': {
@@ -167,8 +153,7 @@ let codes = {
             'color': 'cyan',
             'brightness': '0.8'
         },
-        'desc': 'shower rain and drizzle',
-
+        'desc': 'shower rain and drizzle'
     },
     314: {
         'params': {
@@ -176,8 +161,7 @@ let codes = {
             'color': 'cyan',
             'brightness': '1.0'
         },
-        'desc': 'heavy shower rain and drizzle',
-
+        'desc': 'heavy shower rain and drizzle'
     },
     321: {
         'params': {
@@ -185,7 +169,7 @@ let codes = {
             'color': 'cyan',
             'brightness': '0.9'
         },
-        'desc': 'shower drizzle',
+        'desc': 'shower drizzle'
     },
 
     500: {
@@ -194,7 +178,7 @@ let codes = {
             'color': 'blue',
             'brightness': '0.5'
         },
-        'desc': 'light rain',
+        'desc': 'light rain'
     },
     501: {
         'params': {
@@ -202,7 +186,7 @@ let codes = {
             'color': 'blue',
             'brightness': '0.6'
         },
-        'desc': 'moderate rain',
+        'desc': 'moderate rain'
     },
     502: {
         'params': {
@@ -210,7 +194,7 @@ let codes = {
             'color': 'blue',
             'brightness': '0.7'
         },
-        'desc': 'heavy intensity rain',
+        'desc': 'heavy intensity rain'
     },
     503: {
         'params': {
@@ -226,7 +210,7 @@ let codes = {
             'period': 1,
             'cycles': 100
         },
-        'desc': 'very heavy rain',
+        'desc': 'very heavy rain'
     },
     504: {
         'params': {
@@ -242,7 +226,7 @@ let codes = {
             'period': 0.5,
             'cycles': 100
         },
-        'desc': 'extreme rain',
+        'desc': 'extreme rain'
     },
     511: {
         'params': {
@@ -250,7 +234,7 @@ let codes = {
             'color': 'blue',
             'brightness': '0.8'
         },
-        'desc': 'freezing rain',
+        'desc': 'freezing rain'
     },
     520: {
         'params': {
@@ -258,7 +242,7 @@ let codes = {
             'color': 'blue',
             'brightness': '0.1'
         },
-        'desc': 'light intensity shower rain',
+        'desc': 'light intensity shower rain'
     },
     521: {
         'params': {
@@ -266,7 +250,7 @@ let codes = {
             'color': 'blue',
             'brightness': '0.2'
         },
-        'desc': 'shower rain',
+        'desc': 'shower rain'
     },
     522: {
         'params': {
@@ -274,7 +258,7 @@ let codes = {
             'color': 'blue',
             'brightness': '0.3'
         },
-        'desc': 'heavy intensity shower rain',
+        'desc': 'heavy intensity shower rain'
     },
     531: {
         'params': {
@@ -282,7 +266,7 @@ let codes = {
             'color': 'blue',
             'brightness': '0.4'
         },
-        'desc': 'ragged shower rain',
+        'desc': 'ragged shower rain'
     },
 
     600: {
@@ -291,7 +275,7 @@ let codes = {
             'color': 'green',
             'brightness': '0.8'
         },
-        'desc': 'light snow',
+        'desc': 'light snow'
     },
     601: {
         'params': {
@@ -307,7 +291,7 @@ let codes = {
             'period': 1,
             'cycles': 100
         },
-        'desc': 'snow',
+        'desc': 'snow'
     },
     602: {
         'params': {
@@ -323,7 +307,7 @@ let codes = {
             'period': 0.5,
             'cycles': 100
         },
-        'desc': 'heavy snow',
+        'desc': 'heavy snow'
     },
     611: {
         'params': {
@@ -331,7 +315,7 @@ let codes = {
             'color': 'purple',
             'brightness': '0.7'
         },
-        'desc': 'sleet',
+        'desc': 'sleet'
     },
     612: {
         'params': {
@@ -339,7 +323,7 @@ let codes = {
             'color': 'purple',
             'brightness': '0.6'
         },
-        'desc': 'light shower sleet',
+        'desc': 'light shower sleet'
     },
     613: {
         'params': {
@@ -347,7 +331,7 @@ let codes = {
             'color': 'purple',
             'brightness': '0.5'
         },
-        'desc': 'shower sleet',
+        'desc': 'shower sleet'
     },
     615: {
         'params': {
@@ -355,7 +339,7 @@ let codes = {
             'color': 'purple',
             'brightness': '0.4'
         },
-        'desc': 'light rain and snow',
+        'desc': 'light rain and snow'
     },
     616: {
         'params': {
@@ -363,7 +347,7 @@ let codes = {
             'color': 'purple',
             'brightness': '0.3'
         },
-        'desc': 'rain and snow',
+        'desc': 'rain and snow'
     },
     620: {
         'params': {
@@ -371,7 +355,7 @@ let codes = {
             'color': 'green',
             'brightness': '0.5'
         },
-        'desc': 'light shower snow',
+        'desc': 'light shower snow'
     },
     621: {
         'params': {
@@ -379,7 +363,7 @@ let codes = {
             'color': 'green',
             'brightness': '0.6'
         },
-        'desc': 'shower snow',
+        'desc': 'shower snow'
     },
     622: {
         'params': {
@@ -387,8 +371,7 @@ let codes = {
             'color': 'green',
             'brightness': '0.7'
         },
-        'desc': 'heavy shower snow',
-
+        'desc': 'heavy shower snow'
     },
 
     701: {
@@ -397,7 +380,7 @@ let codes = {
             'color': 'pink',
             'brightness': '0.2'
         },
-        'desc': 'mist',
+        'desc': 'mist'
     },
     711: {
         'params': {
@@ -413,7 +396,7 @@ let codes = {
             'period': 1,
             'cycles': 100
         },
-        'desc': 'smoke',
+        'desc': 'smoke'
     },
     721: {
         'params': {
@@ -421,7 +404,7 @@ let codes = {
             'color': 'pink',
             'brightness': '0.3'
         },
-        'desc': 'haze',
+        'desc': 'haze'
     },
     731: {
         'params': {
@@ -429,7 +412,7 @@ let codes = {
             'color': 'orange',
             'brightness': '0.4'
         },
-        'desc': 'sand/ dust whirls',
+        'desc': 'sand/ dust whirls'
     },
     741: {
         'params': {
@@ -437,7 +420,7 @@ let codes = {
             'color': 'pink',
             'brightness': '0.4'
         },
-        'desc': 'fog',
+        'desc': 'fog'
     },
     751: {
         'params': {
@@ -445,7 +428,7 @@ let codes = {
             'color': 'orange',
             'brightness': '0.3'
         },
-        'desc': 'sand',
+        'desc': 'sand'
     },
     761: {
         'params': {
@@ -453,7 +436,7 @@ let codes = {
             'color': 'orange',
             'brightness': '0.7'
         },
-        'desc': 'dust',
+        'desc': 'dust'
     },
     762: {
         'params': {
@@ -469,7 +452,7 @@ let codes = {
             'period': 0.5,
             'cycles': 100
         },
-        'desc': 'volcanic ash',
+        'desc': 'volcanic ash'
     },
     771: {
         'params': {
@@ -485,7 +468,7 @@ let codes = {
             'period': 0.5,
             'cycles': 100
         },
-        'desc': 'squalls',
+        'desc': 'squalls'
     },
     781: {
         'params': {
@@ -501,8 +484,7 @@ let codes = {
             'period': 0.2,
             'cycles': 100
         },
-        'desc': 'tornado',
-
+        'desc': 'tornado'
     },
 
     800: {
@@ -512,7 +494,7 @@ let codes = {
             'brightness': '1.0',
             'kelvin': '2700'
         },
-        'desc': 'clear sky',
+        'desc': 'clear sky'
     },
     801: {
         'params': {
@@ -521,7 +503,7 @@ let codes = {
             'brightness': '0.5',
             'kelvin': '2700'
         },
-        'desc': 'few clouds: 11-25%',
+        'desc': 'few clouds: 11-25%'
     },
     802: {
         'params': {
@@ -530,7 +512,7 @@ let codes = {
             'brightness': '0.3',
             'kelvin': '2700'
         },
-        'desc': 'scattered clouds: 25-50%',
+        'desc': 'scattered clouds: 25-50%'
     },
     803: {
         'params': {
@@ -538,7 +520,7 @@ let codes = {
             'color': 'blue',
             'brightness': '0.4',
         },
-        'desc': 'broken clouds: 51-84%',
+        'desc': 'broken clouds: 51-84%'
     },
     804: {
         'params': {
@@ -546,9 +528,8 @@ let codes = {
             'color': 'blue',
             'brightness': '0.2',
         },
-        'desc': 'overcast clouds: 85-100%',
+        'desc': 'overcast clouds: 85-100%'
     }
-
 };
 
 let testCondObj = {
