@@ -12,6 +12,7 @@ We used several API's and different technologies for functionallity, such as:<p>
 <li>Open Weather API for the conditions</li>
 <li>LIFX to operate our lightbulb</li>
 <li>moment.js and moment.js timezones</li>
+<li>OpenCageData API to convert addresses to latitude, longitude, and a timezone.</li>
 <li>anime.js</li>
 <li>embedded google maps</li>
 <br>
@@ -22,6 +23,12 @@ We used several API's and different technologies for functionallity, such as:<p>
 <li>Wind Speed</li>
 <li>Wind Direction</li>
 <p>There is also a map that will show the location of the resort that is selected.</p>
+<br>
+<p>If a user would like to add a resort they click the 'Add a resort button' then:</p>
+<li>A modal shows up with inputs for a name and address.</li>
+<li>The user inputs the name and address and submits.</li>
+<li>The new resort data is added to their local storage so each time they visit the page
+their dropdown list will include their new resort.</li>
 
 
 
