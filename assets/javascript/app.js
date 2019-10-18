@@ -25,12 +25,18 @@ $(document).ready(() => {
     &center=47.608868,-122.335884&zoom=18&maptype=satellite`);
 
     $(document.body).on('click', '.dropdown-item', function () {
+        if (localStorage.getItem('localResorts')) {
+            resortObj = JSON.parse(localStorage.getItem('localResorts'));
+        } else {
+            resortObj = skiResorts;
+        }
+        
         let resortName = $(this).attr('data-name'),
 
             lat = resortObj[resortName].lat,
             lon = resortObj[resortName].long;
-        
-            console.log(resortObj[resortName].lat);
+
+        console.log(resortObj[resortName].lat);
 
         $('#page-header').text(capitalizeFirst(addSpaces(resortName)));;
 

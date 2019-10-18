@@ -12,7 +12,7 @@ body {
     overflow-x: hidden;
 }
 
-.container {
+.cards {
     margin-top: 120px;
 }
 
@@ -49,16 +49,25 @@ svg {
 }
 
 
-/* Dropdown menu */
+/* Navbar*/
+
+#login-submit {
+    display: none;
+}
+
+#sign-out-submit {
+    display: none;
+}
+
+#username {
+    position: absolute;
+    top: 0;
+    right: 90px;
+}
 
 .scrollable-menu {
     height: 350px;
     overflow-y: scroll;
-}
-
-#toggle-switch {
-    position: absolute;
-    right: 10px;
 }
 
 .dropdown-item:hover {
@@ -67,6 +76,7 @@ svg {
 
 
 /* Cards */
+
 .card-container {
     height: 200px;
 }
@@ -94,6 +104,31 @@ svg {
     font-size: 30px;
 }
 
+@media only screen and (max-width: 600px) {
+    .opening-header {
+        position: absolute;
+        top: 0;
+        left: 10%;
+        font-size: 3em;
+    }
+
+    #page-header {
+        font-size: 1.5em;
+    }
+
+    /* .dropdown-toggle {
+        font-size: 1em;
+    } */
+
+    #buttons {
+        display: none;
+    }
+
+    #toggle-switch {
+        display: none;
+    }
+}
+
 /* Mobile Sizing */
 @media only screen and (max-width: 767px) {
 
@@ -103,10 +138,6 @@ svg {
 
     .row {
         margin-bottom: 0;
-    }
-
-    .add-resort {
-        display: none;
     }
 
     .container-hue,
