@@ -12,7 +12,13 @@ function addNewResort(resortObj, name, address) {
         console.log(response.results[0].geometry.lng);
         console.log(response.results[0].annotations.timezone.name);
 
-        skiResorts[name] = {
+        if (localStorage.getItem('localResorts')) {
+            resortObj = JSON.parse(localStorage.getItem('localResorts'));
+        } else {
+            resortObj = skiResorts;
+        }
+
+        resortObj[name] = {
             'lat': response.results[0].geometry.lat,
             'long': response.results[0].geometry.lng,
             'tz': response.results[0].annotations.timezone.name
@@ -20,8 +26,8 @@ function addNewResort(resortObj, name, address) {
 
         let localResorts = {};
 
-        Object.keys(skiResorts).forEach((resort) => {
-            let currentResortData = skiResorts[resort];
+        Object.keys(resortObj).forEach((resort) => {
+            let currentResortData = resortObj[resort];
             localResorts[resort] = currentResortData;
         });
 
