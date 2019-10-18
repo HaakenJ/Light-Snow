@@ -63,29 +63,41 @@
 
 
 
-
-        <ul class="nav bg-dark fixed-top">
-            <li class="nav-item p-2">
-                <h1 class="text-light" id="page-header">LIGHT SNOW</h1>
-            </li>
-            <li class="nav-item p-2">
-                <div class="dropdown">
-                    <button class="btn btn-dark btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
-                        Pick a Resort
-                    </button>
-                    <ul class="dropdown-menu scrollable-menu bg-dark resorts" id="nav-resorts" role="menu">
-                    </ul>
-                </div>
-            </li>
-            <li>
-                <button type="button" class="btn btn-dark mt-3 add-resort" data-toggle="modal"
-                    data-target="#add-resort-modal">Add a Resort</button>
-            </li>
-            <li class="nav-item pt-3" id="toggle-switch">
-                <input id="units" class="p-2" type="checkbox" checked data-toggle="toggle" data-onstyle="secondary"
-                    data-on="F&#176" data-off="C&#176">
-            </li>
-        </ul>
+        <nav class="navbar navbar-expand bg-dark fixed-top">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <h1 class="text-light" id="page-header">LIGHT SNOW</h1>
+                    </li>
+                    <li class="nav-item ml-2">
+                        <div class="dropdown">
+                            <button class="btn btn-dark btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
+                                Pick a Resort
+                            </button>
+                            <ul class="dropdown-menu scrollable-menu bg-dark resorts" id="nav-resorts" role="menu">
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item pl-2 m-2" id="buttons">
+                        <button type="button" class="btn btn-dark add-resort" id="add-resort-button" data-toggle="modal"
+                            data-target="#add-resort-modal">Add a Resort</button>
+                        <button type="submit" class="btn btn-dark btn-outline-light" id="login-submit">Sign
+                            In</button>
+                        <button type="submit" class="btn btn-dark btn-outline-light" id="sign-out-submit">Sign
+                            Out</button>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <h3 class="text-light" id="username">Kramer Johnson</h3>
+                    </li>
+                    <li class="nav-item" id="toggle-switch">
+                        <input id="units" class="p-2 my-0" type="checkbox" checked data-toggle="toggle"
+                            data-onstyle="secondary" data-on="F&#176" data-off="C&#176">
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
         <!-- Modal -->
         <div class="modal fade" id="add-resort-modal" tabindex="-1" role="dialog" aria-labelledby="add-resort-title"
@@ -115,7 +127,7 @@
             </div>
         </div>
 
-        <div class="container">
+        <div class="container cards">
 
             <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-6">
@@ -234,6 +246,8 @@
         <script src="assets/javascript/mergeSort.js"></script>
         <!-- Firebase database functions -->
         <script src="assets/javascript/database.js"></script>
+        <!-- Firebase authentication -->
+        <script src="assets/javascript/auth.js"></script>
         <!-- Animation script -->
         <script src="assets/javascript/animation.js"></script>
         <!-- ski resorts object -->
