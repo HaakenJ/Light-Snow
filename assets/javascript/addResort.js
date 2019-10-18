@@ -8,7 +8,6 @@ function addNewResort(resortObj, name, address) {
         url: `https://api.opencagedata.com/geocode/v1/json?q=${resortAddress}&key=${OPEN_CAGE_KEY}&pretty=1`,
         method: 'GET'
     }).then((response) => {
-        console.log(JSON.stringify(response));
         console.log(response.results[0].geometry.lat);
         console.log(response.results[0].geometry.lng);
         console.log(response.results[0].annotations.timezone.name);
@@ -18,7 +17,6 @@ function addNewResort(resortObj, name, address) {
             'long': response.results[0].geometry.lng,
             'tz': response.results[0].annotations.timezone.name
         }
-        addResorts(skiResorts, 'nav-item', 'nav-resorts');
 
         let localResorts = {};
 
@@ -28,6 +26,12 @@ function addNewResort(resortObj, name, address) {
         });
 
         localStorage.setItem('localResorts', JSON.stringify(localResorts));
+
+        console.log(JSON.parse(localStorage.getItem('localResorts')));
+
+        $('#nav-resorts').empty();
+        resortObj = JSON.parse(localStorage.getItem('localResorts'));
+        addResorts(resortObj, 'nav-item', 'nav-resorts');
 
     })
 }
