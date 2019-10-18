@@ -11,7 +11,7 @@ $(document).ready(() => {
         $('#username').text(name);
     } else {
         $('.add-resort-button').hide();
-        $('#username').hide();
+        $('#username').text('');
         $('#sign-out-submit').hide();
         $('#login-submit').show();
     }
