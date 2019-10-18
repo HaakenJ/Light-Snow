@@ -7,7 +7,7 @@ $(document).ready(() => {
         $('#add-resort-button').show();
         $('#sign-out-submit').show();
     } else {
-        $('.add-resort-button').hide();
+        $('#add-resort-button').hide();
         $('#sign-out-submit').hide();
         $('#login-submit').show();
     }
@@ -15,11 +15,11 @@ $(document).ready(() => {
 
 auth.onAuthStateChanged((user) => {
     if (user) {
-        $('.add-resort-button').show();
+        $('#add-resort-button').show();
         $('#sign-out-submit').show();
         $('#login-submit').hide();
     } else {
-        $('.add-resort-button').hide();
+        $('#add-resort-button').hide();
         $('#sign-out-submit').hide();
         $('#login-submit').show();
     }
