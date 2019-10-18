@@ -5,13 +5,9 @@ const auth = firebase.auth(),
 $(document).ready(() => {
     if (user) {
         $('#add-resort-button').show();
-        $('#username').show();
         $('#sign-out-submit').show();
-        let name = user.displayName;
-        $('#username').text(name);
     } else {
-        $('.add-resort-button').hide();
-        $('#username').text('');
+        $('#add-resort-button').hide();
         $('#sign-out-submit').hide();
         $('#login-submit').show();
     }
@@ -19,15 +15,11 @@ $(document).ready(() => {
 
 auth.onAuthStateChanged((user) => {
     if (user) {
-        $('.add-resort-button').show();
-        $('#username').show();
+        $('#add-resort-button').show();
         $('#sign-out-submit').show();
         $('#login-submit').hide();
-        let name = user.displayName;
-        $('#username').text(name);
     } else {
-        $('.add-resort-button').hide();
-        $('#username').hide();
+        $('#add-resort-button').hide();
         $('#sign-out-submit').hide();
         $('#login-submit').show();
     }

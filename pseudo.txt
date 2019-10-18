@@ -124,8 +124,19 @@ When a user clicks the unfavorite icon next to a favorited resort.
 
 
 
-******BUGS******
+******FAVORITES******
 
-    - A PUT call to set a state color of the light does not override an effect  
-        that was made with a POST call.
-    - Need to get the .replce '-' with ' ' function to replace all '-'s
+- Create a new dropdown menu for a users favorites
+- Add buttons next to each resort in the pick resort dropdown to add to favorites
+- Add buttons next to each resort in the favorites dropdown to remove from favorites
+
+- When a user logs in the favorites and buttons next to dropdown items are displayed.
+    - The favorites dropdown is populated from that user's favorites in firebase.
+    - When a user goes to Add a Resort that resort is added to their favorites in firebase.
+        - The dropdown is repopulated.
+    
+    - When a user clicks a favorite button.
+        - retreive the object for the resort that was clicked and add it to the favorites in firebase.
+    - When a user clicks a remove button.
+        - Find the object with the name of the clicked item and remove it from firebase.
+

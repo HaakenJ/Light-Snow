@@ -59,13 +59,6 @@ svg {
     display: none;
 }
 
-#username {
-    position: absolute;
-    top: 0;
-    right: 90px;
-    width: 120px;
-}
-
 .scrollable-menu {
     height: 350px;
     overflow-y: scroll;
