@@ -63,6 +63,7 @@ svg {
     position: absolute;
     top: 0;
     right: 90px;
+    width: 120px;
 }
 
 .scrollable-menu {
@@ -116,15 +117,11 @@ svg {
         font-size: 1.5em;
     }
 
-    /* .dropdown-toggle {
-        font-size: 1em;
-    } */
-
     #buttons {
         display: none;
     }
 
-    #toggle-switch {
+    #name-toggle-ul {
         display: none;
     }
 }
