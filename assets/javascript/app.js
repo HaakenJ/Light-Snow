@@ -10,11 +10,11 @@ $(document).ready(() => {
 
         resortObj = JSON.parse(localStorage.getItem('localResorts'));
 
-        addResorts(resortObj, 'nav-item', 'nav-resorts');
+        addResorts(resortObj, 'nav-item', 'nav-resorts', true);
         addResorts(resortObj, 'opening-item', 'opening-resorts');
     } else {
         resortObj = skiResorts;
-        addResorts(resortObj, 'nav-item', 'nav-resorts');
+        addResorts(resortObj, 'nav-item', 'nav-resorts', true);
         addResorts(resortObj, 'opening-item', 'opening-resorts');
     }
 
@@ -24,14 +24,14 @@ $(document).ready(() => {
     $('#map').attr('src', `https://www.google.com/maps/embed/v1/view?key=${MAPS_KEY}
     &center=47.608868,-122.335884&zoom=18&maptype=satellite`);
 
-    $(document.body).on('click', '.dropdown-item', function () {
+    $(document.body).on('click', 'a', function () {
         if (localStorage.getItem('localResorts')) {
             resortObj = JSON.parse(localStorage.getItem('localResorts'));
         } else {
             resortObj = skiResorts;
         }
         
-        let resortName = $(this).attr('data-name'),
+        let resortName = $(this).parent().attr('data-name'),
 
             lat = resortObj[resortName].lat,
             lon = resortObj[resortName].long;
@@ -45,7 +45,7 @@ $(document).ready(() => {
         getWeather(lat, lon, resortName, resortObj);
     })
 
-    $('.opening-item').one('click', () => {
+    $('.opening-item a').one('click', () => {
         animateSnowflake.play();
         removeHeader.play();
         $('.main-content').show();

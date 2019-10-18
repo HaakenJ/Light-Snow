@@ -68,6 +68,12 @@ svg {
     background-color: black;
 }
 
+.fav-button {
+    position: absolute;
+    right: 2px;
+    background-color: #00FF00;
+}
+
 
 /* Cards */
 
