@@ -29,20 +29,3 @@ function pushToDatabase(username, resort) {
 function removeFromDb(username, resort) {
     database.ref(username + '/favorites/' + resort).remove();
 }
-
-
-// This will only be used if we add the favorites option.
-/* ******************************************* */
-// When a favoite button is clicked, add the resort to the DB.
-$('#add').on('click', (event) => {
-    event.preventDefault();
-    pushToDatabase('kramer', $('input').val());
-    console.log('You clicked');
-})
-// When a remove button is clicked, remove the resort to the DB.
-$('#remove').on('click', (event) => {
-    event.preventDefault();
-    removeFromDb('kramer', $('input').val());
-    console.log('You removed');
-})
-/* ****************************************** */

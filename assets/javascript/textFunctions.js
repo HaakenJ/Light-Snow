@@ -5,9 +5,6 @@ function addSpaces(str) {
 }
 
 
-
-
-
 // Capitalize the first letter in words.
 function capitalizeFirst(str) {
     let newArr = str.split(' ');
@@ -18,12 +15,9 @@ function capitalizeFirst(str) {
 }
 
 
-
-
-
 /* Function to add keys from the passed in object, change '-'s to spaces,
     capitalize the first letters, and add them to the dropdown menu. */
-function addResorts(resortObj, classToAdd, idToAddTo, favBool = false) {
+function addResorts(resortObj, classToAdd, idToAddTo, buttons = false) {
     resortList = mergeSort(Object.keys(resortObj));
 
     resortList.forEach((resort) => {
@@ -34,7 +28,7 @@ function addResorts(resortObj, classToAdd, idToAddTo, favBool = false) {
         newATag.text(capitalizeFirst(addSpaces(resort)));
         addButton.text('+');
         newListItem.append(newATag);
-        if (favBool) {
+        if (buttons) {
             newListItem.append(addButton);
         }
         newListItem.attr('data-name', resort);
