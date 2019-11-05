@@ -68,7 +68,8 @@ svg {
     background-color: black;
 }
 
-.fav-button {
+.fav-button,
+.rmv-button {
     position: absolute;
     right: 2px;
     background-color: #00FF00;

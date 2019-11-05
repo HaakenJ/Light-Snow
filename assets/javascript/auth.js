@@ -18,10 +18,14 @@ auth.onAuthStateChanged((user) => {
         $('#add-resort-button').show();
         $('#sign-out-submit').show();
         $('#login-submit').hide();
+        $('.fav-button').show();
+        $('.rmv-button').show();
     } else {
         $('#add-resort-button').hide();
         $('#sign-out-submit').hide();
         $('#login-submit').show();
+        $('.fav-button').hide();
+        $('.rmv-button').hide();
     }
 })
 
