@@ -5,18 +5,11 @@ $(document).ready(() => {
     let resortObj;
     /* Add resorts to the dropdown located in the navbar, they will be added
         to the nav-resorts id and each item will be given the class nav-item */
-    /* If the user has local resorts stored then those are used instead. */
-    if (localStorage.getItem('localResorts')) {
 
-        resortObj = JSON.parse(localStorage.getItem('localResorts'));
+    resortObj = skiResorts;
+    addResorts(resortObj, 'nav-item', 'nav-resorts', true);
+    addResorts(resortObj, 'opening-item', 'opening-resorts');
 
-        addResorts(resortObj, 'nav-item', 'nav-resorts', true);
-        addResorts(resortObj, 'opening-item', 'opening-resorts');
-    } else {
-        resortObj = skiResorts;
-        addResorts(resortObj, 'nav-item', 'nav-resorts', true);
-        addResorts(resortObj, 'opening-item', 'opening-resorts');
-    }
 
     console.log(resortObj);
 
@@ -25,12 +18,8 @@ $(document).ready(() => {
     &center=47.608868,-122.335884&zoom=18&maptype=satellite`);
 
     $(document.body).on('click', 'a', function () {
-        if (localStorage.getItem('localResorts')) {
-            resortObj = JSON.parse(localStorage.getItem('localResorts'));
-        } else {
-            resortObj = skiResorts;
-        }
-        
+        resortObj = skiResorts;
+
         let resortName = $(this).parent().attr('data-name'),
 
             lat = resortObj[resortName].lat,
@@ -63,6 +52,6 @@ $(document).ready(() => {
         let resortName = $('#add-resort-name').val(),
             resortAddress = $('#add-resort-address').val();
 
-        addNewResort(skiResorts, resortName, resortAddress);
+        addNewResort(resortName, resortAddress);
     })
 })
