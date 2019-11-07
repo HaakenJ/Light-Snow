@@ -17,7 +17,7 @@ $(document).ready(() => {
     $('#map').attr('src', `https://www.google.com/maps/embed/v1/view?key=${MAPS_KEY}
     &center=47.608868,-122.335884&zoom=18&maptype=satellite`);
 
-    $(document.body).on('click', 'a', function () {
+    $(document.body).on('click', '.nav-item a', function () {
         resortObj = skiResorts;
 
         let resortName = $(this).parent().attr('data-name'),
@@ -27,11 +27,29 @@ $(document).ready(() => {
 
         console.log(resortObj[resortName].lat);
 
-        $('#page-header').text(capitalizeFirst(addSpaces(resortName)));;
+        $('#page-header').text(capitalizeFirst(addSpaces(resortName)));
 
         /* Call the getWeather (which will also change the light) function
             with the clicked item's lat, long, and name. */
         getWeather(lat, lon, resortName, resortObj);
+    })
+
+    $(document.body).on('click', '.fav-item a', function () {
+
+        let userRef = database.ref(username + '/favorites/'),
+            resortName = $(this).parent().attr('data-name');
+
+        userRef.once('value').then((snap) => {
+            let lat = snap.val()[resortName].lat,
+                lon = snap.val()[resortName].lon,
+                resortObj = snap.val();
+
+            $('#page-header').text(capitalizeFirst(addSpaces(resortName)));
+
+            /* Call the getWeather (which will also change the light) function
+            with the clicked item's lat, long, and name. */
+            getWeather(lat, lon, resortName, resortObj);
+        })
     })
 
     $('.opening-item a').one('click', () => {

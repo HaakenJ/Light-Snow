@@ -6,10 +6,12 @@ $(document).ready(() => {
     if (user) {
         $('#add-resort-button').show();
         $('#sign-out-submit').show();
+        $('#user-resorts').show();
     } else {
         $('#add-resort-button').hide();
         $('#sign-out-submit').hide();
         $('#login-submit').show();
+        $('#user-resorts').hide();
     }
 })
 
@@ -20,12 +22,14 @@ auth.onAuthStateChanged((user) => {
         $('#login-submit').hide();
         $('.fav-button').show();
         $('.rmv-button').show();
+        $('#user-resorts').show();
     } else {
         $('#add-resort-button').hide();
         $('#sign-out-submit').hide();
         $('#login-submit').show();
         $('.fav-button').hide();
         $('.rmv-button').hide();
+        $('#user-resorts').hide();
     }
 })
 

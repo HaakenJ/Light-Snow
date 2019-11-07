@@ -9,18 +9,20 @@ function addNewResort(name, address) {
 
         let newResort = {};
 
-        newResort[lat] = response.results[0].geometry.lat;
-        newResort[lng] = response.results[0].geometry.lng;
-        newResort[tz] = response.results[0].annotations.timezone.name;
+        newResort['lat'] = response.results[0].geometry.lat;
+        newResort['lng'] = response.results[0].geometry.lng;
+        newResort['tz'] = response.results[0].annotations.timezone.name;
 
         console.log(newResort);
 
-        pushToDatabase(user.displayName, name, newResort);
+        let username = firebase.auth().currentUser.displayName;
+
+        pushToDatabase(username, name, newResort);
 
 
         $('#fav-resorts').empty();
-        resortObj = getUserResorts(user.displayName);
-        addResorts(resortObj, 'fav-item', 'fav-resorts');
-
+        getUserResorts(username);
+        $('#add-resort-name').val("");
+        $('#add-resort-address').val("");
     })
 }
