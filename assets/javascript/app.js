@@ -34,7 +34,7 @@ $(document).ready(() => {
         getWeather(lat, lon, resortName, resortObj);
     })
 
-    $(document.body).on('click', '.fav-item a', function () {
+    $(document.body).on('click', '.fav-item', function () {
 
         let userRef = database.ref(username + '/favorites/'),
             resortName = $(this).parent().attr('data-name');

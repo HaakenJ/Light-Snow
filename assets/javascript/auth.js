@@ -7,6 +7,7 @@ $(document).ready(() => {
         $('#add-resort-button').show();
         $('#sign-out-submit').show();
         $('#user-resorts').show();
+        getUserResorts(user.displayName);
     } else {
         $('#add-resort-button').hide();
         $('#sign-out-submit').hide();
@@ -23,6 +24,7 @@ auth.onAuthStateChanged((user) => {
         $('.fav-button').show();
         $('.rmv-button').show();
         $('#user-resorts').show();
+        getUserResorts(user.displayName);
     } else {
         $('#add-resort-button').hide();
         $('#sign-out-submit').hide();

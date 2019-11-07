@@ -32,6 +32,6 @@ function getUserResorts(username) {
     let userRef = database.ref(username + '/favorites/');
 
     userRef.once('value').then((snap) => {
-        addResorts(snal.val(), 'fav-item', 'fav-resorts');
+        addResorts(snap.val(), 'fav-item', 'fav-resorts');
     })
 }
