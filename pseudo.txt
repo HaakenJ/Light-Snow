@@ -1,0 +1,33 @@
+Handlebars index file will display the full page and it will have variables
+listed for each value that will be rendered.  
+
+When I call the weather API, it will fill an object with the values I want
+to render onto the page.  
+
+I will then pass this object to res.render("index", obj); which will render 
+the data onto the page.
+
+### Icons
+- Icons can be found on darkskyapp.github.io/skycons
+
+### Functions needed
+
+    - get a timestamp from ____ hours ago relative to current.
+    - Parse the JSON Dark Sky response to create an object to render
+    - Take in different weather types and output certain colors/effects
+
+### API's to Use
+
+    - Dark Sky
+    - GEOCoding API to change addresses to lat long
+    - LIFX API
+    - Twilio to send a text to you when you wake up displaying the weather
+        properties you asked for.
+
+# Dark Sky API
+
+    - Icon data point will have the name for the weather forecasted.
+    - Use axios to make requests directly from Node.js
+        - This is because Dark Sky does not support CORS.
+        - Your Node server is the proxy server between your client and 
+            the Dark Sky servers.
