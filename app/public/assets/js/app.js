@@ -10,14 +10,28 @@ $(document).ready(() => {
     addResorts(resortObj, 'nav-item', 'nav-resorts', true);
     addResorts(resortObj, 'opening-item', 'opening-resorts');
 
-
-    console.log(resortObj);
-
     $('.main-content').hide();
     $('#map').attr('src', `https://www.google.com/maps/embed/v1/view?key=${MAPS_KEY}
     &center=47.608868,-122.335884&zoom=18&maptype=satellite`);
 
     $(document.body).on('click', '.nav-item a', function () {
+        resortObj = skiResorts;
+
+        let resortName = $(this).parent().attr('data-name'),
+
+            lat = resortObj[resortName].lat,
+            lon = resortObj[resortName].long;
+
+        console.log(resortObj[resortName].lat);
+
+        $('#page-header').text(capitalizeFirst(addSpaces(resortName)));
+
+        /* Call the getWeather (which will also change the light) function
+            with the clicked item's lat, long, and name. */
+        getWeather(lat, lon, resortName, resortObj);
+    })
+    
+    $(document.body).on('click', '.opening-item a', function () {
         resortObj = skiResorts;
 
         let resortName = $(this).parent().attr('data-name'),
