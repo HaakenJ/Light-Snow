@@ -1,5 +1,5 @@
-exports = (sequelize, DataTypes) => {
-    const Resort = sequelize.define("Resort", {
+module.exports = (sequelize, DataTypes) => {
+    const Location = sequelize.define("location", {
         name: {
             type: DataTypes.STRING,
             allowNull: false
@@ -13,5 +13,5 @@ exports = (sequelize, DataTypes) => {
             allowNull: false
         }
     });
-    return Resort;
+    return Location;
 }

@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "kramer",
-    "database": "resort_DB",
+    "database": "location_DB",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false
