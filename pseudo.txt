@@ -32,8 +32,33 @@ the data onto the page.
         - Your Node server is the proxy server between your client and 
             the Dark Sky servers.
 
+# User stories
 
-# Main functionality
+    - Targeted towards outdoor enthusiasts who's activities are weather
+        dependent, e.g. Backcountry skiers and snowboarders, in-bounds skiers
+        and snowboarders, rock climbers, mountaineers, snowmobiliers,
+        wind-surfers.
+    - A user may not be able to get the exact weather parameters they want for
+        the exact locations they want and may not want to deal with having to
+        look them up all the time.
+        - This app allows them to choose the parameters they want and don't 
+            want then tell the app to text or email those results to them at
+            a desired time an date.
+        - A user can also choose to have this be a recurring notification.
+    - Skiers and snowboarders most importantly will need to know what the 
+        weather has been for the past 12-24 hours.
+        - Specifically the type of weather, temp hi-lo, freezing levels, trends 
+            in freezing levels, wind speed and direction, and precip type and
+            amounts.
+        - For this I will need to figure out how to get historical data for the
+            past n hours.
+        - May need to calculate certain data myself such as trends in freezing
+            levels.
+
+
+# Main functionality - This is the MVP
+
+## Main focus of the app will be that users 
 
     - User enters the time and date of the alarm, the weather parameters they
         want to receive, and the location they desire.
