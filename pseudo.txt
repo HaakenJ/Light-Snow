@@ -1,12 +1,3 @@
-Handlebars index file will display the full page and it will have variables
-listed for each value that will be rendered.  
-
-When I call the weather API, it will fill an object with the values I want
-to render onto the page.  
-
-I will then pass this object to res.render("index", obj); which will render 
-the data onto the page.
-
 ### Icons
 - Icons can be found on darkskyapp.github.io/skycons
 
@@ -31,6 +22,9 @@ the data onto the page.
         - This is because Dark Sky does not support CORS.
         - Your Node server is the proxy server between your client and 
             the Dark Sky servers.
+
+# Main function of the app is to get the exact weather you want send to you
+    when you want it.
 
 # User stories
 
@@ -57,8 +51,6 @@ the data onto the page.
 
 
 # Main functionality - This is the MVP
-
-## Main focus of the app will be that users 
 
     - User enters the time and date of the alarm, the weather parameters they
         want to receive, and the location they desire.
@@ -89,6 +81,20 @@ the data onto the page.
                 set the color, effects, etc for the light.
         
         - The server then returns to a listening state.
+
+
+# Features
+
+MVP - Choose any weather parameters the user wants
+MVP - Have weather texted to the user at a time and date
+    - Have weather emailed to user at a time and date
+MVP - Integrate a color changing light bulb to change to a color and effect for
+        the weather
+    - User can specifiy what colors and effect they want for different weather.
+    - Different light bulbs like LIFX or Phillips Hue can all be used.
+    - Users can add their own locations which are saved to their account.
+    - Have a mobile app that can send notifications instead of text/email.
+
 
 ## Concerns
 
