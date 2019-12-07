@@ -31,3 +31,48 @@ the data onto the page.
         - This is because Dark Sky does not support CORS.
         - Your Node server is the proxy server between your client and 
             the Dark Sky servers.
+
+
+# Main functionality
+
+    - User enters the time and date of the alarm, the weather parameters they
+        want to receive, and the location they desire.
+    - Dark Sky api is called and the current forecast parameters for the user's
+        location are displayed on the page.
+    - A post request is made to the server with the three parameters of data in
+        the body.
+    - The server is listening for a post request on /api/alarm
+    - The server receives the request made to that url and executes the below
+        code.
+    - The time and date in the body are passed into a function to convert them
+        to cron format which is stored.
+    - A sequelize query gets the lat and long associated with the location.
+    - a url is assembled for the dark sky api using the lat and long.
+    - The desired weather parameters are stored in some kind of structure to be 
+        used later.
+    - A node-schedule job is created for the user's desired time.
+    - When the job fires, 
+        - A dark sky request is made and returns a json response.
+        - The response is fed into a function which will return a string
+            containing the desired parameters from the response.
+            - This string is passed into the twilio api which will send the 
+                string as a text message to the user.
+        - The 'icon' value in the response is passed to a sequelize query 
+            which will return the proper data values (color, effect etc.) for
+            the LIFX API call.
+            - These data values are used to make a request to the LIFX API to 
+                set the color, effects, etc for the light.
+        
+        - The server then returns to a listening state.
+
+## Concerns
+
+    - Is there a limit to the number of scheduled alarms that can be running at
+        any one time?
+        - Where are these alarms stored?
+        - Do the scheduled job objects just disappear from memory once they
+            have fired?
+        - Is the limit of scheduled alarms based on the server's memory?
+    - To actually put this type of program into production, the user would need
+        to enter their private LIFX api token which isn't safe for the user.
+        - Is there another way for a user to connect a light?
