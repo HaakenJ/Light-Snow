@@ -4,6 +4,17 @@ const db = require("./app/models");
 const PORT = process.env.PORT || 8080;
 const app = express();
 
+const moment = require("moment");
+
+const schedule = require("node-schedule");
+const date = "45 14 6 12 *";
+
+let notification = schedule.scheduleJob(date, () => {
+    console.log("-----------------------------------");
+    console.log("Looks like the alarm for date2 went off");
+    console.log("-----------------------------------");
+})
+
 app.use(express.static("./app/public"));
 
 app.use(express.urlencoded({ extended: true }));
