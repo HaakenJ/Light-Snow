@@ -52,7 +52,7 @@ $(document).ready(() => {
         })
     })
 
-    $('.opening-item a').one('click', () => {
+    $('.opening-item a').one('click', function () {
         animateSnowflake.play();
         removeHeader.play();
         $('.main-content').show();
@@ -61,6 +61,19 @@ $(document).ready(() => {
         setTimeout(() => {
             $('.opening-content').hide();
         }, 2000);
+
+        let resortName = $(this).parent().attr('data-name'),
+
+            lat = resortObj[resortName].lat,
+            lon = resortObj[resortName].long;
+
+        console.log(resortObj[resortName].lat);
+
+        $('#page-header').text(capitalizeFirst(addSpaces(resortName)));
+
+        /* Call the getWeather (which will also change the light) function
+            with the clicked item's lat, long, and name. */
+        getWeather(lat, lon, resortName, resortObj);
     })
 
     // Add a resort to dropdown only if it is letters, spaces, or hyphens.
