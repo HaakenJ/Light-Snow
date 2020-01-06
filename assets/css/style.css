@@ -40,6 +40,16 @@ svg {
     font-family: 'Monoton', cursive;
 }
 
+.container-white,
+.container-hue,
+.map {
+    box-shadow: 2px 4px 5px gray;
+}
+
+nav {
+    box-shadow: 2px 3px 10px gray;
+}
+
 @media screen and (max-width: 1130px) {
     .opening-header {
         position: absolute;
@@ -85,11 +95,6 @@ svg {
 .card-body {
     padding: 10px;
     text-align: center;
-}
-
-.container-hue,
-.container-white {
-    border-radius: 10px;
 }
 
 .container-white {
