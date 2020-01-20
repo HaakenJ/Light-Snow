@@ -1,6 +1,7 @@
 # Light-Snow
 
 [Live Site](haakenj.github.io/Light-Snow)
+
 [Demonstration of Light Bulb Connectivity](https://imgur.com/gallery/czgMh7R)
 
 ## Overview
