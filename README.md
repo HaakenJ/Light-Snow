@@ -1,5 +1,8 @@
 # Light-Snow
 
+[Live Site](haakenj.github.io/Light-Snow)
+[Demonstration of Light Bulb Connectivity](https://imgur.com/gallery/czgMh7R)
+
 ## Overview
 
 This application allows a user to select a ski resort and quickly see the most important weather conditions at that resort along with a satellite image of the resort, and if the user owns a LIFX color changing light bulb, the light will change to a color corresponding to the weather at the resort.  This allows users to determine a quick overview of the weather at a resort without even having to read a single line.
